@@ -54,7 +54,8 @@ const About = () => {
     }
 
     setLoading(true);
-    const { error } = await supabase.from("contact_messages").insert([result.data]);
+    const { name, phone, email, message } = result.data;
+    const { error } = await supabase.from("contact_messages").insert({ name, phone, email, message });
     setLoading(false);
 
     if (error) {
