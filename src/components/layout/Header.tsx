@@ -1,8 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
-import { Snowflake, Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.png";
 
 const navItems = [
   { to: "/", label: "בית" },
@@ -19,15 +20,17 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between md:h-20">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group" onClick={() => setOpen(false)}>
-          <div className="flex h-10 w-10 items-center justify-center rounded-md bg-gradient-accent shadow-glow transition-transform group-hover:scale-105">
-            <Snowflake className="h-5 w-5 text-primary-foreground" strokeWidth={2.5} />
-          </div>
+          <img
+            src={logo}
+            alt="נאור אדיר בע״מ - שירות ואחזקה לדלתות קירור"
+            className="h-12 w-12 rounded-md object-contain transition-transform group-hover:scale-105 md:h-14 md:w-14"
+          />
           <div className="leading-tight">
             <div className="text-lg font-extrabold tracking-tight text-foreground md:text-xl">
-              נאור אדיר
+              נאור אדיר בע״מ
             </div>
-            <div className="text-[10px] font-medium uppercase tracking-widest text-muted-foreground md:text-xs">
-              Cooling Solutions
+            <div className="text-[10px] font-medium tracking-wide text-muted-foreground md:text-xs">
+              שירות ואחזקה לדלתות קירור
             </div>
           </div>
         </Link>
