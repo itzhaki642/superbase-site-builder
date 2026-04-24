@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Snowflake, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 export function Footer() {
   return (
@@ -9,19 +10,21 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-md bg-gradient-accent">
-                <Snowflake className="h-5 w-5 text-primary-foreground" strokeWidth={2.5} />
-              </div>
+              <img
+                src={logo}
+                alt="נאור אדיר בע״מ"
+                className="h-12 w-12 rounded-md bg-white/95 object-contain p-1"
+              />
               <div>
                 <div className="text-lg font-extrabold tracking-tight text-white">נאור אדיר בע״מ</div>
-                <div className="text-xs uppercase tracking-widest text-concrete-300">
-                  Industrial Cooling Solutions
+                <div className="text-xs tracking-wide text-concrete-300">
+                  שירות ואחזקה לדלתות קירור
                 </div>
               </div>
             </div>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-concrete-300">
-              פתרונות קירור תעשייתיים מובילים. מומחים בייבוא, מכירה והתקנה של דלתות קירור,
-              וכן במתן שירות מקצועי ואמין לחדרי קירור ללקוחות תעשייתיים.
+              שיווק, התקנה ואחזקה של כל סוגי דלתות הקירור, המקררים והמקפיאים המסחריים
+              והתעשייתיים. שירותי שיפוץ וחידוש דלתות ורמפות, ובניית חדרי קירור ברמה מקצועית גבוהה.
             </p>
           </div>
 
