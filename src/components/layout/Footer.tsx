@@ -35,6 +35,7 @@ export function Footer() {
               <li><Link to="/" className="text-concrete-300 transition-colors hover:text-primary-glow">בית</Link></li>
               <li><Link to="/catalog" className="text-concrete-300 transition-colors hover:text-primary-glow">קטלוג מוצרים</Link></li>
               <li><Link to="/about" className="text-concrete-300 transition-colors hover:text-primary-glow">אודות ויצירת קשר</Link></li>
+              <li><Link to="/accessibility" className="text-concrete-300 transition-colors hover:text-primary-glow">הצהרת נגישות</Link></li>
             </ul>
           </div>
 
@@ -62,9 +63,12 @@ export function Footer() {
 
         <div className="mt-6 flex flex-col items-center justify-between gap-2 text-xs text-concrete-300 md:flex-row">
           <div>© {new Date().getFullYear()} נאור אדיר בע״מ. כל הזכויות שמורות.</div>
-          <Link to="/auth" className="transition-colors hover:text-primary-glow">
-            כניסת מנהלים
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link to="/accessibility" className="transition-colors hover:text-primary-glow">הצהרת נגישות</Link>
+            <Link to="/auth" className="transition-colors hover:text-primary-glow">
+              כניסת מנהלים
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
