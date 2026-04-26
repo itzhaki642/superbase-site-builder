@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone } from "lucide-react";
 import { PublicLayout } from "@/components/layout/PublicLayout";
+import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/contact";
 
 export default function AccessibilityStatement() {
   return (
@@ -42,9 +43,9 @@ export default function AccessibilityStatement() {
               אנו ממשיכים לשפר את נגישות האתר. אם נתקלתם בקושי בגלישה, בתוכן שאינו נגיש או בבקשה להתאמה פרטנית, נשמח שתעדכנו אותנו ונפעל לטפל בכך בהקדם האפשרי.
             </p>
             <div className="grid gap-3 sm:grid-cols-2">
-              <a href="tel:050-000-0000" className="flex items-center gap-3 rounded-md border border-border bg-card p-4 text-card-foreground transition-colors hover:border-primary">
+              <a href={`tel:${PHONE_TEL}`} className="flex items-center gap-3 rounded-md border border-border bg-card p-4 text-card-foreground transition-colors hover:border-primary">
                 <Phone className="h-5 w-5 text-primary" />
-                <span dir="ltr">050-000-0000</span>
+                <span dir="ltr">{PHONE_DISPLAY}</span>
               </a>
               <a href="mailto:info@naor-adir.co.il" className="flex items-center gap-3 rounded-md border border-border bg-card p-4 text-card-foreground transition-colors hover:border-primary">
                 <Mail className="h-5 w-5 text-primary" />

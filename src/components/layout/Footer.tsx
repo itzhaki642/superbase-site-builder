@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 import logo from "@/assets/logo.png";
+import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/contact";
 
 export function Footer() {
   return (
@@ -45,7 +46,7 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-concrete-300">
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 shrink-0 text-primary-glow" />
-                <span dir="ltr">050-000-0000</span>
+                <a href={`tel:${PHONE_TEL}`} className="transition-colors hover:text-primary-glow" dir="ltr">{PHONE_DISPLAY}</a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 shrink-0 text-primary-glow" />

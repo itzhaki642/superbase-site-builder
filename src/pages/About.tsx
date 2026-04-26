@@ -9,7 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { PublicLayout } from "@/components/layout/PublicLayout";
-import { supabase } from "@/integrations/supabase/client";
+import { createWhatsAppUrl, PHONE_DISPLAY, PHONE_TEL } from "@/lib/contact";
 
 const contactSchema = z.object({
   name: z.string().trim().min(2, "שם חייב להכיל לפחות 2 תווים").max(100, "שם ארוך מדי"),
@@ -53,23 +53,15 @@ const About = () => {
       return;
     }
 
-    setLoading(true);
     const { name, phone, email, message } = result.data;
-    const { error } = await supabase.from("contact_messages").insert({ name, phone, email, message });
+    const whatsappMessage = `שלום, אשמח לקבל פרטים לגבי שירותי נאור אדיר.\nשם: ${name}\nטלפון: ${phone}\nאימייל: ${email}\nהודעה: ${message}`;
+    setLoading(true);
+    window.open(createWhatsAppUrl(whatsappMessage), "_blank", "noopener,noreferrer");
     setLoading(false);
 
-    if (error) {
-      toast({
-        title: "אירעה שגיאה",
-        description: "לא הצלחנו לשלוח את הפנייה. אנא נסו שוב.",
-        variant: "destructive",
-      });
-      return;
-    }
-
     toast({
-      title: "הפנייה התקבלה!",
-      description: "נחזור אליכם בהקדם האפשרי. תודה!",
+      title: "ההודעה מוכנה לשליחה",
+      description: "פתחנו WhatsApp עם פרטי הפנייה. לחצו שליחה כדי להעביר אותה.",
     });
     setForm({ name: "", phone: "", email: "", message: "" });
   };
@@ -130,13 +122,13 @@ const About = () => {
               </p>
 
               <div className="mt-8 space-y-4">
-                <a href="tel:050-000-0000" className="flex items-center gap-4 rounded-lg border border-border bg-card p-4 transition-colors hover:border-primary">
+                <a href={`tel:${PHONE_TEL}`} className="flex items-center gap-4 rounded-lg border border-border bg-card p-4 transition-colors hover:border-primary">
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
                     <Phone className="h-5 w-5" />
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground">טלפון</div>
-                    <div className="font-bold text-foreground" dir="ltr">050-000-0000</div>
+                    <div className="font-bold text-foreground" dir="ltr">{PHONE_DISPLAY}</div>
                   </div>
                 </a>
 
@@ -203,7 +195,7 @@ const About = () => {
                       autoComplete="tel"
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                      placeholder="050-0000000"
+                      placeholder="054-984-1800"
                       maxLength={30}
                       required
                       className="mt-1.5"
