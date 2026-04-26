@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { AccessibilityWidget } from "@/components/AccessibilityWidget";
 
 export function PublicLayout({ children }: { children: ReactNode }) {
   return (
@@ -14,6 +15,7 @@ export function PublicLayout({ children }: { children: ReactNode }) {
       <Header />
       <main id="main-content" className="flex-1" tabIndex={-1}>{children}</main>
       <Footer />
+      <AccessibilityWidget />
     </div>
   );
 }
