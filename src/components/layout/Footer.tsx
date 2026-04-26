@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/contact";
 
@@ -54,7 +54,11 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary-glow" />
-                <span>אזור התעשייה, ישראל</span>
+                <span>העליה 47, עפולה</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Clock className="mt-0.5 h-4 w-4 shrink-0 text-primary-glow" />
+                <span>ימים א׳ - ה׳, 6:30 - 17:00</span>
               </li>
             </ul>
           </div>
