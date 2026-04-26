@@ -69,7 +69,9 @@ const Catalog = () => {
           <div className="relative flex-1">
             <Search className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
             <Input
+              id="catalog-search"
               type="text"
+              aria-label="חיפוש מוצרים בקטלוג"
               placeholder="חיפוש לפי שם מוצר או תיאור..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
@@ -78,7 +80,9 @@ const Catalog = () => {
           </div>
           <div className="flex flex-wrap gap-2">
             <button
+              type="button"
               onClick={() => setActiveCategory(null)}
+              aria-pressed={!activeCategory}
               className={cn(
                 "rounded-md border px-4 py-2 text-sm font-medium transition-colors",
                 !activeCategory
@@ -90,8 +94,10 @@ const Catalog = () => {
             </button>
             {categories.map((c) => (
               <button
+                type="button"
                 key={c.id}
                 onClick={() => setActiveCategory(c.id)}
+                aria-pressed={activeCategory === c.id}
                 className={cn(
                   "rounded-md border px-4 py-2 text-sm font-medium transition-colors",
                   activeCategory === c.id
@@ -142,7 +148,7 @@ const Catalog = () => {
                           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                       ) : (
-                        <div className="flex h-full items-center justify-center">
+                        <div className="flex h-full items-center justify-center" aria-hidden="true">
                           <Package className="h-16 w-16 text-muted-foreground/40" />
                         </div>
                       )}

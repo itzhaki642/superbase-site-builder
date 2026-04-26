@@ -182,6 +182,8 @@ const About = () => {
                   <Label htmlFor="name">שם מלא *</Label>
                   <Input
                     id="name"
+                    aria-required="true"
+                    autoComplete="name"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     placeholder="ישראל ישראלי"
@@ -197,6 +199,8 @@ const About = () => {
                     <Input
                       id="phone"
                       type="tel"
+                      aria-required="true"
+                      autoComplete="tel"
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
                       placeholder="050-0000000"
@@ -211,6 +215,8 @@ const About = () => {
                     <Input
                       id="email"
                       type="email"
+                      aria-required="true"
+                      autoComplete="email"
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
                       placeholder="name@example.com"
@@ -226,6 +232,7 @@ const About = () => {
                   <Label htmlFor="message">הודעה *</Label>
                   <Textarea
                     id="message"
+                    aria-required="true"
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     placeholder="ספרו לנו במה אנחנו יכולים לעזור..."
@@ -239,6 +246,7 @@ const About = () => {
                 <Button
                   type="submit"
                   disabled={loading}
+                  aria-busy={loading}
                   size="lg"
                   className="w-full bg-gradient-accent shadow-glow hover:opacity-90"
                 >

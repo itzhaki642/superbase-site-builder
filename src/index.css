@@ -119,6 +119,15 @@
     font-feature-settings: "kern" 1, "liga" 1;
   }
 
+  :focus-visible {
+    outline: 3px solid hsl(var(--ring));
+    outline-offset: 3px;
+  }
+
+  main:focus {
+    outline: none;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold tracking-tight;
     letter-spacing: -0.02em;
@@ -196,4 +205,15 @@
 
 .animate-fade-in {
   animation: fade-in 0.5s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
