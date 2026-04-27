@@ -1,11 +1,8 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Shield, Wrench, Clock, Award, Snowflake, DoorOpen, ChevronLeft, Building2, PackageCheck, Factory, Store, Zap, Truck } from "lucide-react";
+import { ArrowLeft, Shield, Wrench, Clock, Award, Snowflake, Building2, PackageCheck, Factory, Store, Zap, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { PublicLayout } from "@/components/layout/PublicLayout";
 import heroImage from "@/assets/hero-cold-storage.jpg";
-import doorImage from "@/assets/cold-door-detail.jpg";
-import serviceImage from "@/assets/service-image.jpg";
 
 const values = [
   { icon: Award, title: "עשרות שנות ניסיון", desc: "ניסיון מעשי רחב בקירור ובפתרונות לתעשייה" },
@@ -13,30 +10,6 @@ const values = [
   { icon: Shield, title: "מומחי רמפות", desc: "מהיחידים בארץ שבונים רמפות למפעלים מאפס" },
   { icon: Store, title: "חנות לקבלנים", desc: "אספקת אביזרים וחלקים לקבלנים ולאנשי מקצוע" },
   { icon: Zap, title: "שירות מהיר", desc: "מענה זריז לתקלות, כולל מסלולי שירות לפי חוזה" },
-];
-
-const services = [
-  {
-    icon: DoorOpen,
-    title: "דלתות קירור",
-    desc: "דלתות קירור, דלתות נגררות, דלתות מתרוממות ודלתות מהירות לתעשייה ולמפעלים",
-    image: doorImage,
-    link: "/cooling-doors",
-  },
-  {
-    icon: Snowflake,
-    title: "חדרי קירור",
-    desc: "בניית חדרי קירור, שירות ואחזקה, כולל פתרונות איטום ו-P.V.C לפי דרישת הלקוח",
-    image: heroImage,
-    link: "/about",
-  },
-  {
-    icon: Wrench,
-    title: "רמפות ופתרונות טעינה",
-    desc: "בנייה, התקנה וחידוש רמפות, משווי גובה, תריסי גלילה, שלטרים וכריות אטימה",
-    image: serviceImage,
-    link: "/about",
-  },
 ];
 
 const industryClients = [
@@ -210,55 +183,6 @@ const Home = () => {
               ))}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SERVICES */}
-      <section className="concrete-texture py-20 md:py-28">
-        <div className="container">
-          <div className="mx-auto max-w-2xl text-center">
-            <div className="text-xs font-bold uppercase tracking-widest text-primary">תחומי הפעילות שלנו</div>
-            <h2 className="mt-3 text-3xl font-extrabold text-foreground md:text-4xl lg:text-5xl">
-              פתרונות מקיפים למפעלים, מחסנים וחדרי קירור
-            </h2>
-            <p className="mt-4 text-base text-muted-foreground md:text-lg">
-              מדלת הקירור ועד הרמפה, האיטום והתחזוקה השוטפת - אנחנו לצדכם בכל שלב
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-3 md:mt-16">
-            {services.map((s, i) => (
-              <Card
-                key={s.title}
-                className="group overflow-hidden border-border/60 bg-card hover-lift"
-                style={{ animationDelay: `${i * 80}ms` }}
-              >
-                <div className="relative h-52 overflow-hidden">
-                  <img
-                    src={s.image}
-                    alt={s.title}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-concrete-900/80 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 right-4 flex h-12 w-12 items-center justify-center rounded-md bg-gradient-accent shadow-glow">
-                    <s.icon className="h-6 w-6 text-primary-foreground" />
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-foreground">{s.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
-                  <Link
-                    to={s.link}
-                    className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary transition-colors hover:text-primary-dark"
-                  >
-                    קראו עוד
-                    <ChevronLeft className="h-4 w-4" />
-                  </Link>
-                </div>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
