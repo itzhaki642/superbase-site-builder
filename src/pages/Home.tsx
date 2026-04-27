@@ -1,17 +1,16 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Shield, Wrench, Clock, Award, Snowflake, Building2, PackageCheck, Factory, Store, Zap, Truck } from "lucide-react";
+import { ArrowLeft, Wrench, Clock, Snowflake, Building2, PackageCheck, Factory, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PublicLayout } from "@/components/layout/PublicLayout";
 import { SEO } from "@/components/SEO";
 import { ADDRESS, EMAIL, PHONE_DISPLAY, PHONE_OFFICE_DISPLAY } from "@/lib/contact";
 import heroImage from "@/assets/hero-cold-storage.jpg";
 
-const values = [
-  { icon: Award, title: "עשרות שנות ניסיון", desc: "ניסיון מעשי רחב בקירור ובפתרונות לתעשייה" },
-  { icon: PackageCheck, title: "יבואני חלקי חילוף", desc: "ידיות, עיניים, מיקרו־סוויצ׳ים, פרזול ומנגנונים" },
-  { icon: Shield, title: "מומחי רמפות", desc: "מהיחידים בארץ שבונים רמפות למפעלים מאפס" },
-  { icon: Store, title: "חנות לקבלנים", desc: "אספקת אביזרים וחלקים לקבלנים ולאנשי מקצוע" },
-  { icon: Zap, title: "שירות מהיר", desc: "מענה זריז לתקלות, כולל מסלולי שירות לפי חוזה" },
+const trustPoints = [
+  "עשרות שנות ניסיון מעשי",
+  "יבואני חלקי חילוף ואביזרים",
+  "מומחיות בבניית רמפות מאפס",
+  "אספקה לקבלנים ולאנשי מקצוע",
 ];
 
 const industryClients = [
@@ -104,37 +103,35 @@ const Home = () => {
       </section>
 
       {/* CORE PILLARS */}
-      <section className="border-b border-border bg-background py-10 md:py-16">
+      <section className="border-b border-border bg-background py-12 md:py-20">
         <div className="container">
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="mx-auto max-w-3xl text-center">
+            <div className="text-xs font-bold uppercase tracking-widest text-primary">מה אנחנו עושים</div>
+            <h2 className="mt-3 text-2xl font-extrabold leading-tight text-foreground md:text-4xl">
+              שלושה תחומים שמכסים את כל הצורך בשטח
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+              יבוא חלקים, התקנות מקצועיות ושירות מהיר למפעלים, חדרי קירור וקבלנים.
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-4 md:mt-10 md:grid-cols-3">
             {corePillars.map((pillar) => (
-              <div key={pillar.title} className="flex min-h-28 items-start gap-3 border-r-4 border-primary bg-card p-4 shadow-sm first:border-r-primary md:min-h-36 md:gap-4 md:p-6">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary md:h-11 md:w-11">
+              <div key={pillar.title} className="flex min-h-40 flex-col border-t-4 border-primary bg-card p-5 shadow-sm md:min-h-48 md:p-6">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary md:h-12 md:w-12">
                   <pillar.icon className="h-5 w-5" />
                 </div>
-                <div>
-                  <h2 className="text-lg font-extrabold text-foreground md:text-xl">{pillar.title}</h2>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{pillar.desc}</p>
-                </div>
+                <h3 className="mt-5 text-xl font-extrabold text-foreground md:text-2xl">{pillar.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">{pillar.desc}</p>
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* VALUES STRIP */}
-      <section className="border-b border-border bg-background">
-        <div className="container py-10 md:py-16">
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {values.map((v) => (
-              <div key={v.title} className="flex items-start gap-3 md:gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary md:h-12 md:w-12">
-                  <v.icon className="h-5 w-5 md:h-6 md:w-6" />
-                </div>
-                <div>
-                  <div className="font-bold text-foreground">{v.title}</div>
-                  <div className="mt-1 text-sm text-muted-foreground">{v.desc}</div>
-                </div>
+          <div className="mt-8 grid gap-3 border-t border-border pt-6 sm:grid-cols-2 lg:grid-cols-4 md:mt-10 md:pt-8">
+            {trustPoints.map((point) => (
+              <div key={point} className="flex items-center gap-2 text-sm font-bold text-foreground">
+                <span className="h-2 w-2 shrink-0 rounded-full bg-primary" aria-hidden="true" />
+                <span>{point}</span>
               </div>
             ))}
           </div>
