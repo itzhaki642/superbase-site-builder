@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone } from "lucide-react";
 import { PublicLayout } from "@/components/layout/PublicLayout";
-import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/contact";
+import { PHONE_DISPLAY, PHONE_TEL, EMAIL } from "@/lib/contact";
 
 export default function AccessibilityStatement() {
   return (
@@ -47,9 +47,9 @@ export default function AccessibilityStatement() {
                 <Phone className="h-5 w-5 text-primary" />
                 <span dir="ltr">{PHONE_DISPLAY}</span>
               </a>
-              <a href="mailto:info@naor-adir.co.il" className="flex items-center gap-3 rounded-md border border-border bg-card p-4 text-card-foreground transition-colors hover:border-primary">
+              <a href={`mailto:${EMAIL}`} className="flex items-center gap-3 rounded-md border border-border bg-card p-4 text-card-foreground transition-colors hover:border-primary">
                 <Mail className="h-5 w-5 text-primary" />
-                <span dir="ltr">info@naor-adir.co.il</span>
+                <span dir="ltr">{EMAIL}</span>
               </a>
             </div>
           </article>
