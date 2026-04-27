@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { z } from "zod";
-import { Award, Shield, Snowflake, Wrench, Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import { Award, Shield, Snowflake, Wrench, Phone, Mail, MapPin, Clock, Send, PackageCheck, Zap } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -19,10 +19,10 @@ const contactSchema = z.object({
 });
 
 const values = [
-  { icon: Award, title: "מעל 25 שנות ניסיון", desc: "וותק מקצועי רחב בעבודה מול מפעלים ולקוחות תעשייתיים" },
-  { icon: Shield, title: "התמחות ייחודית", desc: "היחידים בארץ שבונים ומתקינים רמפות למפעלים" },
-  { icon: Wrench, title: "שירות מקצועי", desc: "צוות טכנאים מיומן ומנוסה" },
-  { icon: Snowflake, title: "פתרון מקיף", desc: "חדרי קירור, דלתות, תריסים, וילונות ואיטום במקום אחד" },
+  { icon: Award, title: "דור שני וניסיון רב", desc: "עסק משפחתי עם עשרות שנות ניסיון מעשי בענף" },
+  { icon: PackageCheck, title: "יבואני אביזרים", desc: "חלקי חילוף לדלתות, קירור, תריסים, וילונות ורמפות" },
+  { icon: Shield, title: "התמחות ייחודית", desc: "מהיחידים בארץ שבונים ומתקינים רמפות למפעלים" },
+  { icon: Zap, title: "שירות מהיר", desc: "מענה זריז לתקלות ומסלולי שירות לפי חוזה" },
 ];
 
 const About = () => {
