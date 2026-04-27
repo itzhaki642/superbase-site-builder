@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Shield, Wrench, Clock, Award, Snowflake, DoorOpen, ChevronLeft, Building2, PackageCheck, Factory } from "lucide-react";
+import { ArrowLeft, Shield, Wrench, Clock, Award, Snowflake, DoorOpen, ChevronLeft, Building2, PackageCheck, Factory, Store, Zap, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { PublicLayout } from "@/components/layout/PublicLayout";
@@ -8,11 +8,11 @@ import doorImage from "@/assets/cold-door-detail.jpg";
 import serviceImage from "@/assets/service-image.jpg";
 
 const values = [
-  { icon: Award, title: "מעל 25 שנות ניסיון", desc: "וותק מקצועי מוכח בענף הקירור התעשייתי" },
-  { icon: PackageCheck, title: "יבואני חלקי חילוף", desc: "אביזרים לדלתות, וילונות, תריסים ורמפות" },
-  { icon: Shield, title: "מומחי רמפות", desc: "בנייה, התקנה וחידוש רמפות למפעלים" },
-  { icon: Wrench, title: "שירות לקבלנים", desc: "אספקה והתקנה מקצועית בפריסה ארצית" },
-  { icon: Clock, title: "זמינות גבוהה", desc: "תגובה מהירה לקריאות שירות" },
+  { icon: Award, title: "דור שני בענף", desc: "ניסיון משפחתי של עשרות שנים בקירור תעשייתי" },
+  { icon: PackageCheck, title: "יבואני חלקי חילוף", desc: "ידיות, עיניים, מיקרו־סוויצ׳ים, פרזול ומנגנונים" },
+  { icon: Shield, title: "מומחי רמפות", desc: "מהיחידים בארץ שבונים רמפות למפעלים מאפס" },
+  { icon: Store, title: "חנות לקבלנים", desc: "אספקת אביזרים וחלקים לקבלנים ולאנשי מקצוע" },
+  { icon: Zap, title: "שירות מהיר", desc: "מענה זריז לתקלות, כולל מסלולי שירות לפי חוזה" },
 ];
 
 const services = [
@@ -49,10 +49,16 @@ const industryClients = [
 ];
 
 const importSolutions = [
-  "חלקי חילוף לדלתות ודלתות קירור",
-  "אביזרים לוילונות מהירים ותריסי גלילה",
-  "ציוד, רכיבים ופתרונות לרמפות טעינה",
-  "אספקה לקבלנים והתקנה באתרי תעשייה",
+  "חלקי חילוף לדלתות קירור: ידיות, עיניים, מיקרו־סוויצ׳ים ופרזול",
+  "דלתות קירור, דלתות מהירות, וילונות מהירים ותריסי גלילה",
+  "משווי גובה, שלטרים, כריות אטימה ורמפות טעינה",
+  "אספקה לקבלנים לצד התקנות ושירות באתרי תעשייה",
+];
+
+const corePillars = [
+  { icon: Truck, title: "ייבוא", desc: "מלאי אביזרים וחלקי חילוף לדלתות, קירור, תריסים, וילונות ורמפות." },
+  { icon: Wrench, title: "התקנות", desc: "בניית דלתות קירור מא׳ עד ת׳, חדרי קירור קטנים ורמפות למפעלים." },
+  { icon: Clock, title: "שירות", desc: "קריאות שירות מהירות ופתרונות תחזוקה למפעלים לפי צורך וחוזה." },
 ];
 
 const Home = () => {
