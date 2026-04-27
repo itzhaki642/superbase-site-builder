@@ -3,6 +3,7 @@ import { ArrowLeft, CheckCircle2, ChevronRight, DoorOpen, Phone, ShieldCheck, Wr
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { PublicLayout } from "@/components/layout/PublicLayout";
+import { SEO } from "@/components/SEO";
 import doorImage from "@/assets/cold-door-detail.jpg";
 
 const services = [
@@ -29,6 +30,11 @@ const productTypes = [
 const CoolingDoors = () => {
   return (
     <PublicLayout>
+      <SEO
+        title="דלתות קירור | בנייה, התקנה וחלקי חילוף"
+        description="דלתות קירור לתעשייה: בנייה מא׳ עד ת׳, התקנה, שירות מהיר, שיפוץ וחלקי חילוף כמו ידיות, פרזול, עיניים ומיקרו־סוויצ׳ים."
+        path="/cooling-doors"
+      />
       <section className="border-b border-border bg-gradient-dark py-8 md:py-12">
         <div className="container">
           <nav className="flex items-center gap-2 text-sm text-white/70">
