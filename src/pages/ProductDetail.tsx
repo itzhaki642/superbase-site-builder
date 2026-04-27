@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { ChevronRight, Phone, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PublicLayout } from "@/components/layout/PublicLayout";
+import { SEO } from "@/components/SEO";
 import { supabase } from "@/integrations/supabase/client";
 
 interface Product {
@@ -50,6 +51,7 @@ const ProductDetail = () => {
   if (loading) {
     return (
       <PublicLayout>
+        <SEO title="טוען מוצר | נאור אדיר בע״מ" description="טוען פרטי מוצר מקטלוג נאור אדיר בע״מ." path={`/product/${id ?? ""}`} noindex />
         <div className="container py-20">
           <div className="h-96 animate-pulse rounded-lg bg-muted" />
         </div>
@@ -60,6 +62,7 @@ const ProductDetail = () => {
   if (!product) {
     return (
       <PublicLayout>
+        <SEO title="המוצר לא נמצא | נאור אדיר בע״מ" description="המוצר שחיפשתם לא נמצא בקטלוג." path={`/product/${id ?? ""}`} noindex />
         <div className="container py-20 text-center">
           <Package className="mx-auto h-16 w-16 text-muted-foreground/50" />
           <h2 className="mt-4 text-2xl font-bold">המוצר לא נמצא</h2>
@@ -75,6 +78,13 @@ const ProductDetail = () => {
 
   return (
     <PublicLayout>
+      <SEO
+        title={`${product.name} | נאור אדיר בע״מ`}
+        description={product.short_description || "פרטי מוצר מקטלוג נאור אדיר בע״מ לדלתות קירור, חלקי חילוף ופתרונות לתעשייה."}
+        path={`/product/${product.id}`}
+        type="product"
+        image={images[0]}
+      />
       <div className="container py-8 md:py-12">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-sm text-muted-foreground">
