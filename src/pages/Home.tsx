@@ -88,8 +88,8 @@ const Home = () => {
               <span className="mt-2 block text-gradient-primary">ברמה הגבוהה ביותר</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85 md:text-xl">
-              נאור אדיר בע״מ היא יבואנית ומתקינה של חלקי חילוף ואביזרים לדלתות קירור,
-              וילונות מהירים, תריסי גלילה ורמפות — עם פתרונות לקבלנים, מפעלים ואתרי תעשייה בכל הארץ.
+              נאור אדיר בע״מ מרכזת במקום אחד ייבוא חלקי חילוף ואביזרים, בניית דלתות ורמפות,
+              התקנות מקצועיות ושירות מהיר למפעלים, קבלנים ואתרי תעשייה בכל הארץ.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" className="bg-gradient-accent shadow-glow hover:opacity-90">
@@ -102,6 +102,25 @@ const Home = () => {
                 <Link to="/about#contact">דברו איתנו</Link>
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CORE PILLARS */}
+      <section className="border-b border-border bg-background py-12 md:py-16">
+        <div className="container">
+          <div className="grid gap-4 md:grid-cols-3">
+            {corePillars.map((pillar) => (
+              <div key={pillar.title} className="flex min-h-36 items-start gap-4 border-r-4 border-primary bg-card p-6 shadow-sm first:border-r-primary">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
+                  <pillar.icon className="h-5 w-5" />
+                </div>
+                <div>
+                  <h2 className="text-xl font-extrabold text-foreground">{pillar.title}</h2>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{pillar.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -138,7 +157,9 @@ const Home = () => {
                 מקור מקצועי אחד לאביזרים, חלקי חילוף והתקנות בשטח
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-                החברה מייבאת חלקי חילוף ואביזרים לדלתות, דלתות קירור, וילונות מהירים, תריסי גלילה ורמפות — ומספקת אותם לקבלנים לצד התקנות מקצועיות במפעלי מזון, קירור ותעשייה.
+                החברה מייבאת מלאי רחב של חלקי חילוף ואביזרים לדלתות קירור, דלתות מהירות,
+                וילונות מהירים, תריסי גלילה, משווי גובה ורמפות. קבלנים ואנשי מקצוע רוכשים ממנה חלקים,
+                ובמקביל הצוות מתקין ומתחזק את המערכות בשטח אצל מפעלים וחברות תעשייה.
               </p>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
