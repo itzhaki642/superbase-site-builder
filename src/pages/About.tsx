@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { PublicLayout } from "@/components/layout/PublicLayout";
+import { SEO } from "@/components/SEO";
 import { createWhatsAppUrl, PHONE_DISPLAY, PHONE_TEL, PHONE_OFFICE_DISPLAY, PHONE_OFFICE_TEL, EMAIL, ADDRESS, HOURS } from "@/lib/contact";
 
 const contactSchema = z.object({
@@ -68,6 +69,11 @@ const About = () => {
 
   return (
     <PublicLayout>
+      <SEO
+        title="אודות ויצירת קשר | נאור אדיר בע״מ"
+        description="צרו קשר עם נאור אדיר בע״מ ליבוא, התקנה ושירות לדלתות קירור, רמפות, וילונות מהירים, תריסי גלילה וחלקי חילוף לקבלנים."
+        path="/about"
+      />
       {/* About */}
       <section className="border-b border-border bg-gradient-dark py-16 md:py-24">
         <div className="container">
