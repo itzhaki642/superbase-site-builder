@@ -188,23 +188,23 @@ const Home = () => {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-dark py-20 md:py-24">
+      <section className="bg-gradient-dark py-14 md:py-24">
         <div className="container">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div>
               <div className="text-xs font-bold uppercase tracking-widest text-primary-glow">בואו נדבר</div>
-              <h2 className="mt-3 text-3xl font-extrabold text-white md:text-4xl lg:text-5xl">
+              <h2 className="mt-3 text-2xl font-extrabold leading-tight text-white md:text-4xl lg:text-5xl">
                 זקוקים לפתרון קירור עבור העסק שלכם?
               </h2>
               <p className="mt-4 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
                 צוות המומחים שלנו ישמח לסייע בבחירת הפתרון המתאים ביותר -
                 מייעוץ ראשוני ועד התקנה מלאה, בניית רמפות ושירות מתמשך.
               </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Button asChild size="lg" className="bg-gradient-accent shadow-glow hover:opacity-90">
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap md:mt-8">
+                <Button asChild size="lg" className="w-full bg-gradient-accent shadow-glow hover:opacity-90 sm:w-auto">
                   <Link to="/about#contact">השאירו פרטים</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white/30 bg-transparent text-white hover:bg-white/10">
+                <Button asChild size="lg" variant="outline" className="w-full border-white/30 bg-transparent text-white hover:bg-white/10 sm:w-auto">
                   <Link to="/catalog">לקטלוג המוצרים</Link>
                 </Button>
               </div>
