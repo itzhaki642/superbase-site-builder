@@ -50,28 +50,28 @@ const Home = () => {
           <div className="absolute inset-0 bg-gradient-hero" />
         </div>
 
-        <div className="container relative py-24 md:py-36 lg:py-44">
+        <div className="container relative py-20 md:py-36 lg:py-44">
           <div className="max-w-3xl animate-fade-in-up">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-white backdrop-blur-md">
+            <div className="mb-5 inline-flex max-w-full items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[0.7rem] font-medium uppercase tracking-widest text-white backdrop-blur-md md:px-4 md:text-xs">
               <Snowflake className="h-3.5 w-3.5" />
               פתרונות קירור, דלתות ורמפות לתעשייה
             </div>
-            <h1 className="text-4xl font-extrabold leading-tight text-white text-balance md:text-6xl lg:text-7xl">
+            <h1 className="text-3xl font-extrabold leading-tight text-white text-balance sm:text-4xl md:text-6xl lg:text-7xl">
               דלתות קירור, חדרי קירור ורמפות למפעלים
               <span className="mt-2 block text-gradient-primary">ברמה הגבוהה ביותר</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85 md:text-xl">
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/85 md:mt-6 md:text-xl">
               נאור אדיר בע״מ מרכזת במקום אחד ייבוא חלקי חילוף ואביזרים, בניית דלתות ורמפות,
               התקנות מקצועיות ושירות מהיר למפעלים, קבלנים ואתרי תעשייה בכל הארץ.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild size="lg" className="bg-gradient-accent shadow-glow hover:opacity-90">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap md:mt-8">
+              <Button asChild size="lg" className="w-full bg-gradient-accent shadow-glow hover:opacity-90 sm:w-auto">
                 <Link to="/catalog">
                   צפה בקטלוג המוצרים
                   <ArrowLeft className="mr-1 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white/40 bg-white/10 text-white backdrop-blur-md hover:bg-white/20">
+              <Button asChild size="lg" variant="outline" className="w-full border-white/40 bg-white/10 text-white backdrop-blur-md hover:bg-white/20 sm:w-auto">
                 <Link to="/about#contact">דברו איתנו</Link>
               </Button>
             </div>
@@ -80,16 +80,16 @@ const Home = () => {
       </section>
 
       {/* CORE PILLARS */}
-      <section className="border-b border-border bg-background py-12 md:py-16">
+      <section className="border-b border-border bg-background py-10 md:py-16">
         <div className="container">
           <div className="grid gap-4 md:grid-cols-3">
             {corePillars.map((pillar) => (
-              <div key={pillar.title} className="flex min-h-36 items-start gap-4 border-r-4 border-primary bg-card p-6 shadow-sm first:border-r-primary">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
+              <div key={pillar.title} className="flex min-h-28 items-start gap-3 border-r-4 border-primary bg-card p-4 shadow-sm first:border-r-primary md:min-h-36 md:gap-4 md:p-6">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary md:h-11 md:w-11">
                   <pillar.icon className="h-5 w-5" />
                 </div>
                 <div>
-                  <h2 className="text-xl font-extrabold text-foreground">{pillar.title}</h2>
+                  <h2 className="text-lg font-extrabold text-foreground md:text-xl">{pillar.title}</h2>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{pillar.desc}</p>
                 </div>
               </div>
@@ -100,12 +100,12 @@ const Home = () => {
 
       {/* VALUES STRIP */}
       <section className="border-b border-border bg-background">
-        <div className="container py-12 md:py-16">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="container py-10 md:py-16">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((v) => (
-              <div key={v.title} className="flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
-                  <v.icon className="h-6 w-6" />
+              <div key={v.title} className="flex items-start gap-3 md:gap-4">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary md:h-12 md:w-12">
+                  <v.icon className="h-5 w-5 md:h-6 md:w-6" />
                 </div>
                 <div>
                   <div className="font-bold text-foreground">{v.title}</div>
@@ -118,15 +118,15 @@ const Home = () => {
       </section>
 
       {/* IMPORTER POSITIONING */}
-      <section className="border-b border-border bg-background py-16 md:py-20">
+      <section className="border-b border-border bg-background py-12 md:py-20">
         <div className="container">
-          <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="grid items-center gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10">
             <div>
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-md border border-primary/20 bg-primary/10 text-primary">
-                <Factory className="h-6 w-6" />
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-primary/20 bg-primary/10 text-primary md:h-12 md:w-12">
+                <Factory className="h-5 w-5 md:h-6 md:w-6" />
               </div>
-              <div className="mt-5 text-xs font-bold uppercase tracking-widest text-primary">יבוא, אספקה והתקנה</div>
-              <h2 className="mt-3 text-3xl font-extrabold text-foreground md:text-4xl">
+              <div className="mt-4 text-xs font-bold uppercase tracking-widest text-primary md:mt-5">יבוא, אספקה והתקנה</div>
+              <h2 className="mt-3 text-2xl font-extrabold leading-tight text-foreground md:text-4xl">
                 מקור מקצועי אחד לאביזרים, חלקי חילוף והתקנות בשטח
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
@@ -137,8 +137,8 @@ const Home = () => {
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
               {importSolutions.map((solution) => (
-                <div key={solution} className="flex min-h-20 items-center gap-3 rounded-md border border-border/70 bg-card p-4 shadow-sm">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
+                <div key={solution} className="flex min-h-16 items-center gap-3 rounded-md border border-border/70 bg-card p-3 shadow-sm md:min-h-20 md:p-4">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary md:h-9 md:w-9">
                     <PackageCheck className="h-5 w-5" />
                   </div>
                   <span className="text-sm font-bold leading-relaxed text-foreground">{solution}</span>
@@ -150,15 +150,15 @@ const Home = () => {
       </section>
 
       {/* CLIENTS */}
-      <section className="border-b border-border bg-muted/30 py-16 md:py-20">
+      <section className="border-b border-border bg-muted/30 py-12 md:py-20">
         <div className="container">
-          <div className="grid items-center gap-10 lg:grid-cols-[0.75fr_1.25fr]">
+          <div className="grid items-center gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:gap-10">
             <div>
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-md border border-primary/20 bg-primary/10 text-primary">
-                <Building2 className="h-6 w-6" />
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-primary/20 bg-primary/10 text-primary md:h-12 md:w-12">
+                <Building2 className="h-5 w-5 md:h-6 md:w-6" />
               </div>
-              <div className="mt-5 text-xs font-bold uppercase tracking-widest text-primary">לקוחות מובילים</div>
-              <h2 className="mt-3 text-3xl font-extrabold text-foreground md:text-4xl">
+              <div className="mt-4 text-xs font-bold uppercase tracking-widest text-primary md:mt-5">לקוחות מובילים</div>
+              <h2 className="mt-3 text-2xl font-extrabold leading-tight text-foreground md:text-4xl">
                 מוניטין שנבנה עם החברות הגדולות בישראל
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
@@ -171,10 +171,10 @@ const Home = () => {
               {industryClients.map((client) => (
                 <div
                   key={client.name}
-                  className="group flex min-h-28 flex-col items-center justify-center bg-background/70 p-5 text-center transition-colors hover:bg-primary/5"
+                  className="group flex min-h-24 flex-col items-center justify-center bg-background/70 p-4 text-center transition-colors hover:bg-primary/5 md:min-h-28 md:p-5"
                   aria-label={`לקוח: ${client.name}`}
                 >
-                  <div className="text-2xl font-black leading-none text-foreground transition-colors group-hover:text-primary md:text-3xl">
+                  <div className="text-xl font-black leading-none text-foreground transition-colors group-hover:text-primary md:text-3xl">
                     {client.mark}
                   </div>
                   <div className="mt-3 h-px w-10 bg-primary/40 transition-all group-hover:w-14" />
@@ -188,23 +188,23 @@ const Home = () => {
       </section>
 
       {/* CTA */}
-      <section className="bg-gradient-dark py-20 md:py-24">
+      <section className="bg-gradient-dark py-14 md:py-24">
         <div className="container">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div>
               <div className="text-xs font-bold uppercase tracking-widest text-primary-glow">בואו נדבר</div>
-              <h2 className="mt-3 text-3xl font-extrabold text-white md:text-4xl lg:text-5xl">
+              <h2 className="mt-3 text-2xl font-extrabold leading-tight text-white md:text-4xl lg:text-5xl">
                 זקוקים לפתרון קירור עבור העסק שלכם?
               </h2>
               <p className="mt-4 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
                 צוות המומחים שלנו ישמח לסייע בבחירת הפתרון המתאים ביותר -
                 מייעוץ ראשוני ועד התקנה מלאה, בניית רמפות ושירות מתמשך.
               </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Button asChild size="lg" className="bg-gradient-accent shadow-glow hover:opacity-90">
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap md:mt-8">
+                <Button asChild size="lg" className="w-full bg-gradient-accent shadow-glow hover:opacity-90 sm:w-auto">
                   <Link to="/about#contact">השאירו פרטים</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white/30 bg-transparent text-white hover:bg-white/10">
+                <Button asChild size="lg" variant="outline" className="w-full border-white/30 bg-transparent text-white hover:bg-white/10 sm:w-auto">
                   <Link to="/catalog">לקטלוג המוצרים</Link>
                 </Button>
               </div>
