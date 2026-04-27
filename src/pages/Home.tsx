@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Shield, Wrench, Clock, Award, Snowflake, DoorOpen, ChevronLeft, Building2 } from "lucide-react";
+import { ArrowLeft, Shield, Wrench, Clock, Award, Snowflake, DoorOpen, ChevronLeft, Building2, PackageCheck, Factory } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { PublicLayout } from "@/components/layout/PublicLayout";
@@ -9,8 +9,9 @@ import serviceImage from "@/assets/service-image.jpg";
 
 const values = [
   { icon: Award, title: "מעל 25 שנות ניסיון", desc: "וותק מקצועי מוכח בענף הקירור התעשייתי" },
-  { icon: Shield, title: "מומחי רמפות", desc: "היחידים בארץ שבונים ומתקינים רמפות למפעלים" },
-  { icon: Wrench, title: "שירות מקצועי", desc: "צוות טכנאים מיומן ומנוסה" },
+  { icon: PackageCheck, title: "יבואני חלקי חילוף", desc: "אביזרים לדלתות, וילונות, תריסים ורמפות" },
+  { icon: Shield, title: "מומחי רמפות", desc: "בנייה, התקנה וחידוש רמפות למפעלים" },
+  { icon: Wrench, title: "שירות לקבלנים", desc: "אספקה והתקנה מקצועית בפריסה ארצית" },
   { icon: Clock, title: "זמינות גבוהה", desc: "תגובה מהירה לקריאות שירות" },
 ];
 
@@ -38,15 +39,20 @@ const services = [
   },
 ];
 
-const clients = [
+const industryClients = [
   { name: "תנובה", mark: "תנובה", meta: "מוצרי חלב ומזון" },
   { name: "שטראוס", mark: "Strauss", meta: "מזון ומשקאות" },
   { name: "טירת צבי", mark: "טירת צבי", meta: "תעשיית בשר" },
-  { name: "שופרסל", mark: "שופרסל", meta: "רשת קמעונאות" },
-  { name: "אסם", mark: "Osem", meta: "תעשיית מזון" },
   { name: "עוף טוב", mark: "עוף טוב", meta: "ייצור ושיווק" },
-  { name: "קו אופ ישראל", mark: "CO-OP", meta: "קמעונאות" },
-  { name: "נגה גלידות", mark: "Noga", meta: "גלידות וקירור" },
+  { name: "זוגלובק", mark: "זוגלובק", meta: "תעשיית מזון" },
+  { name: "מעדנות", mark: "מעדנות", meta: "ייצור מזון" },
+];
+
+const importSolutions = [
+  "חלקי חילוף לדלתות ודלתות קירור",
+  "אביזרים לוילונות מהירים ותריסי גלילה",
+  "ציוד, רכיבים ופתרונות לרמפות טעינה",
+  "אספקה לקבלנים והתקנה באתרי תעשייה",
 ];
 
 const Home = () => {
