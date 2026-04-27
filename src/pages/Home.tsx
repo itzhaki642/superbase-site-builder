@@ -100,7 +100,7 @@ const Home = () => {
         <div className="container">
           <div className="grid gap-4 md:grid-cols-3">
             {corePillars.map((pillar) => (
-              <div key={pillar.title} className="group flex min-h-28 items-start gap-3 border-r-4 border-primary bg-card p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:shadow-glow first:border-r-primary md:min-h-36 md:gap-4 md:p-6">
+              <div key={pillar.title} className="group red-fill-hover flex min-h-28 items-start gap-3 border-r-4 border-primary bg-card p-4 shadow-sm first:border-r-primary md:min-h-36 md:gap-4 md:p-6">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary-foreground/15 group-hover:text-primary-foreground md:h-11 md:w-11">
                   <pillar.icon className="h-5 w-5" />
                 </div>
@@ -134,7 +134,7 @@ const Home = () => {
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
               {importSolutions.map((solution) => (
-                <div key={solution} className="group flex min-h-16 items-center gap-3 rounded-md border border-border/70 bg-card p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:bg-primary hover:shadow-glow md:min-h-20 md:p-4">
+                <div key={solution} className="group red-fill-hover flex min-h-16 items-center gap-3 rounded-md border border-border/70 bg-card p-3 shadow-sm hover:border-primary md:min-h-20 md:p-4">
                   <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary-foreground/15 group-hover:text-primary-foreground md:h-9 md:w-9">
                     <PackageCheck className="h-5 w-5" />
                   </div>
@@ -168,7 +168,7 @@ const Home = () => {
               {industryClients.map((client) => (
                 <div
                   key={client.name}
-                  className="group flex min-h-24 flex-col items-center justify-center bg-background/70 p-4 text-center transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:shadow-glow md:min-h-28 md:p-5"
+                  className="group red-fill-hover flex min-h-24 flex-col items-center justify-center bg-background/70 p-4 text-center md:min-h-28 md:p-5"
                   aria-label={`לקוח: ${client.name}`}
                 >
                   <div className="text-xl font-black leading-none text-foreground transition-colors duration-300 group-hover:text-primary-foreground md:text-3xl">
