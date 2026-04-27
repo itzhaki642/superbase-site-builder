@@ -100,13 +100,13 @@ const Home = () => {
         <div className="container">
           <div className="grid gap-4 md:grid-cols-3">
             {corePillars.map((pillar) => (
-              <div key={pillar.title} className="flex min-h-28 items-start gap-3 border-r-4 border-primary bg-card p-4 shadow-sm first:border-r-primary md:min-h-36 md:gap-4 md:p-6">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary md:h-11 md:w-11">
+              <div key={pillar.title} className="group flex min-h-28 items-start gap-3 border-r-4 border-primary bg-card p-4 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:shadow-glow first:border-r-primary md:min-h-36 md:gap-4 md:p-6">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary-foreground/15 group-hover:text-primary-foreground md:h-11 md:w-11">
                   <pillar.icon className="h-5 w-5" />
                 </div>
                 <div>
-                  <h2 className="text-lg font-extrabold text-foreground md:text-xl">{pillar.title}</h2>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{pillar.desc}</p>
+                  <h2 className="text-lg font-extrabold text-foreground transition-colors duration-300 group-hover:text-primary-foreground md:text-xl">{pillar.title}</h2>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground transition-colors duration-300 group-hover:text-primary-foreground/85">{pillar.desc}</p>
                 </div>
               </div>
             ))}
@@ -134,11 +134,11 @@ const Home = () => {
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
               {importSolutions.map((solution) => (
-                <div key={solution} className="flex min-h-16 items-center gap-3 rounded-md border border-border/70 bg-card p-3 shadow-sm md:min-h-20 md:p-4">
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary md:h-9 md:w-9">
+                <div key={solution} className="group flex min-h-16 items-center gap-3 rounded-md border border-border/70 bg-card p-3 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:bg-primary hover:shadow-glow md:min-h-20 md:p-4">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary transition-colors duration-300 group-hover:bg-primary-foreground/15 group-hover:text-primary-foreground md:h-9 md:w-9">
                     <PackageCheck className="h-5 w-5" />
                   </div>
-                  <span className="text-sm font-bold leading-relaxed text-foreground">{solution}</span>
+                  <span className="text-sm font-bold leading-relaxed text-foreground transition-colors duration-300 group-hover:text-primary-foreground">{solution}</span>
                 </div>
               ))}
             </div>
@@ -168,14 +168,14 @@ const Home = () => {
               {industryClients.map((client) => (
                 <div
                   key={client.name}
-                  className="group flex min-h-24 flex-col items-center justify-center bg-background/70 p-4 text-center transition-colors hover:bg-primary/5 md:min-h-28 md:p-5"
+                  className="group flex min-h-24 flex-col items-center justify-center bg-background/70 p-4 text-center transition-all duration-300 hover:-translate-y-1 hover:bg-primary hover:shadow-glow md:min-h-28 md:p-5"
                   aria-label={`לקוח: ${client.name}`}
                 >
-                  <div className="text-xl font-black leading-none text-foreground transition-colors group-hover:text-primary md:text-3xl">
+                  <div className="text-xl font-black leading-none text-foreground transition-colors duration-300 group-hover:text-primary-foreground md:text-3xl">
                     {client.mark}
                   </div>
-                  <div className="mt-3 h-px w-10 bg-primary/40 transition-all group-hover:w-14" />
-                  <div className="mt-3 text-xs font-medium text-muted-foreground">{client.meta}</div>
+                  <div className="mt-3 h-px w-10 bg-primary/40 transition-all duration-300 group-hover:w-14 group-hover:bg-primary-foreground/55" />
+                  <div className="mt-3 text-xs font-medium text-muted-foreground transition-colors duration-300 group-hover:text-primary-foreground/85">{client.meta}</div>
                 </div>
               ))}
               </div>
