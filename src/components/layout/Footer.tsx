@@ -19,13 +19,14 @@ export function Footer() {
               <div>
                 <div className="text-lg font-extrabold tracking-tight text-white">נאור אדיר בע״מ</div>
                 <div className="text-xs tracking-wide text-concrete-300">
-                  שירות ואחזקה לדלתות קירור
+                  מעל 25 שנות ניסיון בקירור ורמפות למפעלים
                 </div>
               </div>
             </div>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-concrete-300">
-              שיווק, התקנה ואחזקה של כל סוגי דלתות הקירור, המקררים והמקפיאים המסחריים
-              והתעשייתיים. שירותי שיפוץ וחידוש דלתות ורמפות, ובניית חדרי קירור ברמה מקצועית גבוהה.
+              בנייה, שירות ואחזקה לחדרי קירור, דלתות קירור, דלתות מהירות, משווי גובה,
+              תריסי גלילה, וילונות P.V.C, שלטרים וכריות אטימה. היחידים בארץ שבונים
+              ומתקינים רמפות למפעלים.
             </p>
           </div>
 
