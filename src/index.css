@@ -182,38 +182,6 @@
     box-shadow: var(--shadow-lg);
   }
 
-  .red-fill-hover {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    transition: var(--transition-smooth);
-  }
-
-  .red-fill-hover::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    background: hsl(var(--primary));
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .red-fill-hover:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-glow);
-  }
-
-  .red-fill-hover:hover::before {
-    transform: scaleX(1);
-  }
-
-  .red-fill-hover > * {
-    position: relative;
-    z-index: 1;
-  }
-
   .section-divider {
     height: 1px;
     background: linear-gradient(90deg, transparent, hsl(var(--border)), transparent);
