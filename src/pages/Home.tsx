@@ -1,18 +1,10 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Shield, Wrench, Clock, Award, Snowflake, Building2, PackageCheck, Factory, Store, Zap, Truck } from "lucide-react";
+import { ArrowLeft, Wrench, Clock, Snowflake, Building2, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PublicLayout } from "@/components/layout/PublicLayout";
 import { SEO } from "@/components/SEO";
 import { ADDRESS, EMAIL, PHONE_DISPLAY, PHONE_OFFICE_DISPLAY } from "@/lib/contact";
 import heroImage from "@/assets/hero-cold-storage.jpg";
-
-const values = [
-  { icon: Award, title: "עשרות שנות ניסיון", desc: "ניסיון מעשי רחב בקירור ובפתרונות לתעשייה" },
-  { icon: PackageCheck, title: "יבואני חלקי חילוף", desc: "ידיות, עיניים, מיקרו־סוויצ׳ים, פרזול ומנגנונים" },
-  { icon: Shield, title: "מומחי רמפות", desc: "מהיחידים בארץ שבונים רמפות למפעלים מאפס" },
-  { icon: Store, title: "חנות לקבלנים", desc: "אספקת אביזרים וחלקים לקבלנים ולאנשי מקצוע" },
-  { icon: Zap, title: "שירות מהיר", desc: "מענה זריז לתקלות, כולל מסלולי שירות לפי חוזה" },
-];
 
 const industryClients = [
   { name: "תנובה", mark: "תנובה", meta: "מוצרי חלב ומזון" },
@@ -21,13 +13,6 @@ const industryClients = [
   { name: "עוף טוב", mark: "עוף טוב", meta: "ייצור ושיווק" },
   { name: "זוגלובק", mark: "זוגלובק", meta: "תעשיית מזון" },
   { name: "מעדנות", mark: "מעדנות", meta: "ייצור מזון" },
-];
-
-const importSolutions = [
-  "חלקי חילוף לדלתות קירור: ידיות, עיניים, מיקרו־סוויצ׳ים ופרזול",
-  "דלתות קירור, דלתות מהירות, וילונות מהירים ותריסי גלילה",
-  "משווי גובה, שלטרים, כריות אטימה ורמפות טעינה",
-  "אספקה לקבלנים לצד התקנות ושירות באתרי תעשייה",
 ];
 
 const corePillars = [
@@ -118,57 +103,6 @@ const Home = () => {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* VALUES STRIP */}
-      <section className="border-b border-border bg-background">
-        <div className="container py-10 md:py-16">
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {values.map((v) => (
-              <div key={v.title} className="flex items-start gap-3 md:gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary md:h-12 md:w-12">
-                  <v.icon className="h-5 w-5 md:h-6 md:w-6" />
-                </div>
-                <div>
-                  <div className="font-bold text-foreground">{v.title}</div>
-                  <div className="mt-1 text-sm text-muted-foreground">{v.desc}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* IMPORTER POSITIONING */}
-      <section className="border-b border-border bg-background py-12 md:py-20">
-        <div className="container">
-          <div className="grid items-center gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10">
-            <div>
-              <div className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-primary/20 bg-primary/10 text-primary md:h-12 md:w-12">
-                <Factory className="h-5 w-5 md:h-6 md:w-6" />
-              </div>
-              <div className="mt-4 text-xs font-bold uppercase tracking-widest text-primary md:mt-5">יבוא, אספקה והתקנה</div>
-              <h2 className="mt-3 text-2xl font-extrabold leading-tight text-foreground md:text-4xl">
-                מקור מקצועי אחד לאביזרים, חלקי חילוף והתקנות בשטח
-              </h2>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-                החברה מייבאת מלאי רחב של חלקי חילוף ואביזרים לדלתות קירור, דלתות מהירות,
-                וילונות מהירים, תריסי גלילה, משווי גובה ורמפות. קבלנים ואנשי מקצוע רוכשים ממנה חלקים,
-                ובמקביל הצוות מתקין ומתחזק את המערכות בשטח אצל מפעלים וחברות תעשייה.
-              </p>
-            </div>
-            <div className="grid gap-3 sm:grid-cols-2">
-              {importSolutions.map((solution) => (
-                <div key={solution} className="flex min-h-16 items-center gap-3 rounded-md border border-border/70 bg-card p-3 shadow-sm md:min-h-20 md:p-4">
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary md:h-9 md:w-9">
-                    <PackageCheck className="h-5 w-5" />
-                  </div>
-                  <span className="text-sm font-bold leading-relaxed text-foreground">{solution}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
