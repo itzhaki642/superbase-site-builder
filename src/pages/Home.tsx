@@ -1,18 +1,10 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Shield, Wrench, Clock, Award, Snowflake, Building2, PackageCheck, Factory, Store, Zap, Truck } from "lucide-react";
+import { ArrowLeft, Wrench, Clock, Snowflake, Building2, PackageCheck, Factory, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PublicLayout } from "@/components/layout/PublicLayout";
 import { SEO } from "@/components/SEO";
 import { ADDRESS, EMAIL, PHONE_DISPLAY, PHONE_OFFICE_DISPLAY } from "@/lib/contact";
 import heroImage from "@/assets/hero-cold-storage.jpg";
-
-const values = [
-  { icon: Award, title: "עשרות שנות ניסיון", desc: "ניסיון מעשי רחב בקירור ובפתרונות לתעשייה" },
-  { icon: PackageCheck, title: "יבואני חלקי חילוף", desc: "ידיות, עיניים, מיקרו־סוויצ׳ים, פרזול ומנגנונים" },
-  { icon: Shield, title: "מומחי רמפות", desc: "מהיחידים בארץ שבונים רמפות למפעלים מאפס" },
-  { icon: Store, title: "חנות לקבלנים", desc: "אספקת אביזרים וחלקים לקבלנים ולאנשי מקצוע" },
-  { icon: Zap, title: "שירות מהיר", desc: "מענה זריז לתקלות, כולל מסלולי שירות לפי חוזה" },
-];
 
 const industryClients = [
   { name: "תנובה", mark: "תנובה", meta: "מוצרי חלב ומזון" },
@@ -115,25 +107,6 @@ const Home = () => {
                 <div>
                   <h2 className="text-lg font-extrabold text-foreground md:text-xl">{pillar.title}</h2>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{pillar.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* VALUES STRIP */}
-      <section className="border-b border-border bg-background">
-        <div className="container py-10 md:py-16">
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {values.map((v) => (
-              <div key={v.title} className="flex items-start gap-3 md:gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary md:h-12 md:w-12">
-                  <v.icon className="h-5 w-5 md:h-6 md:w-6" />
-                </div>
-                <div>
-                  <div className="font-bold text-foreground">{v.title}</div>
-                  <div className="mt-1 text-sm text-muted-foreground">{v.desc}</div>
                 </div>
               </div>
             ))}
