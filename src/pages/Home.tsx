@@ -150,15 +150,15 @@ const Home = () => {
       </section>
 
       {/* CLIENTS */}
-      <section className="border-b border-border bg-muted/30 py-16 md:py-20">
+      <section className="border-b border-border bg-muted/30 py-12 md:py-20">
         <div className="container">
-          <div className="grid items-center gap-10 lg:grid-cols-[0.75fr_1.25fr]">
+          <div className="grid items-center gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:gap-10">
             <div>
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-md border border-primary/20 bg-primary/10 text-primary">
-                <Building2 className="h-6 w-6" />
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-primary/20 bg-primary/10 text-primary md:h-12 md:w-12">
+                <Building2 className="h-5 w-5 md:h-6 md:w-6" />
               </div>
-              <div className="mt-5 text-xs font-bold uppercase tracking-widest text-primary">לקוחות מובילים</div>
-              <h2 className="mt-3 text-3xl font-extrabold text-foreground md:text-4xl">
+              <div className="mt-4 text-xs font-bold uppercase tracking-widest text-primary md:mt-5">לקוחות מובילים</div>
+              <h2 className="mt-3 text-2xl font-extrabold leading-tight text-foreground md:text-4xl">
                 מוניטין שנבנה עם החברות הגדולות בישראל
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
@@ -171,10 +171,10 @@ const Home = () => {
               {industryClients.map((client) => (
                 <div
                   key={client.name}
-                  className="group flex min-h-28 flex-col items-center justify-center bg-background/70 p-5 text-center transition-colors hover:bg-primary/5"
+                  className="group flex min-h-24 flex-col items-center justify-center bg-background/70 p-4 text-center transition-colors hover:bg-primary/5 md:min-h-28 md:p-5"
                   aria-label={`לקוח: ${client.name}`}
                 >
-                  <div className="text-2xl font-black leading-none text-foreground transition-colors group-hover:text-primary md:text-3xl">
+                  <div className="text-xl font-black leading-none text-foreground transition-colors group-hover:text-primary md:text-3xl">
                     {client.mark}
                   </div>
                   <div className="mt-3 h-px w-10 bg-primary/40 transition-all group-hover:w-14" />
