@@ -189,7 +189,8 @@ const Home = () => {
                 מוניטין שנבנה עם החברות הגדולות בישראל
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-                אביזרים ופתרונות שסופקו והותקנו לאורך השנים במפעלי מזון, קירור ותעשייה מובילים בישראל — ישירות ובשיתוף קבלנים.
+                לאורך השנים בוצעו אספקות, התקנות ושירותים במפעלי מזון, קירור ותעשייה מובילים בישראל —
+                כולל עבודה ישירה ובשיתוף קבלנים, תוך שמירה על מקצועיות, זמינות וביצוע נקי בשטח.
               </p>
             </div>
             <div className="rounded-lg border border-border/70 bg-card/80 p-3 shadow-sm backdrop-blur-sm md:p-5">
@@ -290,19 +291,19 @@ const Home = () => {
                 <div className="grid grid-cols-2 gap-6 text-center">
                   <div>
                     <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">+25</div>
-                    <div className="mt-1 text-sm text-white/70">שנות ניסיון</div>
+                    <div className="mt-1 text-sm text-white/70">שנות ניסיון ודור שני</div>
                   </div>
                   <div>
                     <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">1</div>
-                    <div className="mt-1 text-sm text-white/70">יחידים בארץ ברמפות למפעלים</div>
+                    <div className="mt-1 text-sm text-white/70">מומחיות ייחודית בבניית רמפות</div>
                   </div>
                   <div>
-                    <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">24/7</div>
-                    <div className="mt-1 text-sm text-white/70">זמינות שירות</div>
+                    <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">3</div>
+                    <div className="mt-1 text-sm text-white/70">ייבוא, התקנות ושירות</div>
                   </div>
                   <div>
-                    <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">100%</div>
-                    <div className="mt-1 text-sm text-white/70">מקצועיות</div>
+                    <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">מהיר</div>
+                    <div className="mt-1 text-sm text-white/70">מענה שירות לפי צורך וחוזה</div>
                   </div>
                 </div>
               </div>
