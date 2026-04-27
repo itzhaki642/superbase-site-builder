@@ -1,18 +1,10 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Shield, Wrench, Clock, Award, Snowflake, Building2, PackageCheck, Factory, Store, Zap, Truck } from "lucide-react";
+import { ArrowLeft, Wrench, Clock, Snowflake, Building2, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PublicLayout } from "@/components/layout/PublicLayout";
 import { SEO } from "@/components/SEO";
 import { ADDRESS, EMAIL, PHONE_DISPLAY, PHONE_OFFICE_DISPLAY } from "@/lib/contact";
 import heroImage from "@/assets/hero-cold-storage.jpg";
-
-const values = [
-  { icon: Award, title: "עשרות שנות ניסיון", desc: "ניסיון מעשי רחב בקירור ובפתרונות לתעשייה" },
-  { icon: PackageCheck, title: "יבואני חלקי חילוף", desc: "ידיות, עיניים, מיקרו־סוויצ׳ים, פרזול ומנגנונים" },
-  { icon: Shield, title: "מומחי רמפות", desc: "מהיחידים בארץ שבונים רמפות למפעלים מאפס" },
-  { icon: Store, title: "חנות לקבלנים", desc: "אספקת אביזרים וחלקים לקבלנים ולאנשי מקצוע" },
-  { icon: Zap, title: "שירות מהיר", desc: "מענה זריז לתקלות, כולל מסלולי שירות לפי חוזה" },
-];
 
 const industryClients = [
   { name: "תנובה", mark: "תנובה", meta: "מוצרי חלב ומזון" },
@@ -21,13 +13,6 @@ const industryClients = [
   { name: "עוף טוב", mark: "עוף טוב", meta: "ייצור ושיווק" },
   { name: "זוגלובק", mark: "זוגלובק", meta: "תעשיית מזון" },
   { name: "מעדנות", mark: "מעדנות", meta: "ייצור מזון" },
-];
-
-const importSolutions = [
-  "חלקי חילוף לדלתות קירור: ידיות, עיניים, מיקרו־סוויצ׳ים ופרזול",
-  "דלתות קירור, דלתות מהירות, וילונות מהירים ותריסי גלילה",
-  "משווי גובה, שלטרים, כריות אטימה ורמפות טעינה",
-  "אספקה לקבלנים לצד התקנות ושירות באתרי תעשייה",
 ];
 
 const corePillars = [
