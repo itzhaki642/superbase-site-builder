@@ -16,6 +16,7 @@ import AdminCategories from "./pages/admin/AdminCategories";
 import AdminMessages from "./pages/admin/AdminMessages";
 import AdminAdmins from "./pages/admin/AdminAdmins";
 import NotFound from "./pages/NotFound.tsx";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/catalog" element={<Catalog />} />
