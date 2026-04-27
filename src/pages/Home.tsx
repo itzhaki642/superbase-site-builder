@@ -80,16 +80,16 @@ const Home = () => {
       </section>
 
       {/* CORE PILLARS */}
-      <section className="border-b border-border bg-background py-12 md:py-16">
+      <section className="border-b border-border bg-background py-10 md:py-16">
         <div className="container">
           <div className="grid gap-4 md:grid-cols-3">
             {corePillars.map((pillar) => (
-              <div key={pillar.title} className="flex min-h-36 items-start gap-4 border-r-4 border-primary bg-card p-6 shadow-sm first:border-r-primary">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
+              <div key={pillar.title} className="flex min-h-28 items-start gap-3 border-r-4 border-primary bg-card p-4 shadow-sm first:border-r-primary md:min-h-36 md:gap-4 md:p-6">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary md:h-11 md:w-11">
                   <pillar.icon className="h-5 w-5" />
                 </div>
                 <div>
-                  <h2 className="text-xl font-extrabold text-foreground">{pillar.title}</h2>
+                  <h2 className="text-lg font-extrabold text-foreground md:text-xl">{pillar.title}</h2>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{pillar.desc}</p>
                 </div>
               </div>
@@ -100,12 +100,12 @@ const Home = () => {
 
       {/* VALUES STRIP */}
       <section className="border-b border-border bg-background">
-        <div className="container py-12 md:py-16">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="container py-10 md:py-16">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((v) => (
-              <div key={v.title} className="flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
-                  <v.icon className="h-6 w-6" />
+              <div key={v.title} className="flex items-start gap-3 md:gap-4">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary md:h-12 md:w-12">
+                  <v.icon className="h-5 w-5 md:h-6 md:w-6" />
                 </div>
                 <div>
                   <div className="font-bold text-foreground">{v.title}</div>
