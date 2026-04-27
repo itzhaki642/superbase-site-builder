@@ -38,7 +38,16 @@ const services = [
   },
 ];
 
-const clients = ["תנובה", "שטראוס", "טירת צבי", "שופרסל", "אסם", "עוף טוב", "קו אופ ישראל", "נגה גלידות"];
+const clients = [
+  { name: "תנובה", mark: "תנובה", meta: "מוצרי חלב ומזון" },
+  { name: "שטראוס", mark: "Strauss", meta: "מזון ומשקאות" },
+  { name: "טירת צבי", mark: "טירת צבי", meta: "תעשיית בשר" },
+  { name: "שופרסל", mark: "שופרסל", meta: "רשת קמעונאות" },
+  { name: "אסם", mark: "Osem", meta: "תעשיית מזון" },
+  { name: "עוף טוב", mark: "עוף טוב", meta: "ייצור ושיווק" },
+  { name: "קו אופ ישראל", mark: "CO-OP", meta: "קמעונאות" },
+  { name: "נגה גלידות", mark: "Noga", meta: "גלידות וקירור" },
+];
 
 const Home = () => {
   return (
@@ -105,27 +114,37 @@ const Home = () => {
       </section>
 
       {/* CLIENTS */}
-      <section className="border-b border-border bg-background py-16 md:py-20">
+      <section className="border-b border-border bg-muted/30 py-16 md:py-20">
         <div className="container">
-          <div className="grid items-center gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+          <div className="grid items-center gap-10 lg:grid-cols-[0.75fr_1.25fr]">
             <div>
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-md bg-primary/10 text-primary">
+              <div className="inline-flex h-12 w-12 items-center justify-center rounded-md border border-primary/20 bg-primary/10 text-primary">
                 <Building2 className="h-6 w-6" />
               </div>
               <div className="mt-5 text-xs font-bold uppercase tracking-widest text-primary">לקוחות מובילים</div>
               <h2 className="mt-3 text-3xl font-extrabold text-foreground md:text-4xl">
-                ניסיון מוכח עם החברות הגדולות בישראל
+                מוניטין שנבנה עם החברות הגדולות בישראל
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-                לאורך יותר מ-25 שנות פעילות צברה נאור אדיר בע״מ מוניטין מקצועי ורשימת לקוחות מרוצים בתחום הקירור התעשייתי, הדלתות והרמפות למפעלים.
+                מעל 25 שנות פעילות עם מפעלים, רשתות ומותגים מובילים בתחום הקירור התעשייתי, הדלתות והרמפות למפעלים.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <div className="rounded-lg border border-border/70 bg-card/80 p-3 shadow-sm backdrop-blur-sm md:p-5">
+              <div className="grid grid-cols-2 divide-x divide-y divide-border/70 overflow-hidden rounded-md border border-border/70 sm:grid-cols-4">
               {clients.map((client) => (
-                <Card key={client} className="flex min-h-24 items-center justify-center border-border/60 bg-card p-4 text-center shadow-sm">
-                  <span className="text-lg font-extrabold text-foreground">{client}</span>
-                </Card>
+                <div
+                  key={client.name}
+                  className="group flex min-h-28 flex-col items-center justify-center bg-background/70 p-5 text-center transition-colors hover:bg-primary/5"
+                  aria-label={`לקוח: ${client.name}`}
+                >
+                  <div className="text-2xl font-black leading-none text-foreground transition-colors group-hover:text-primary md:text-3xl">
+                    {client.mark}
+                  </div>
+                  <div className="mt-3 h-px w-10 bg-primary/40 transition-all group-hover:w-14" />
+                  <div className="mt-3 text-xs font-medium text-muted-foreground">{client.meta}</div>
+                </div>
               ))}
+              </div>
             </div>
           </div>
         </div>
