@@ -4,6 +4,7 @@ import { Search, Package, ChevronLeft } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { PublicLayout } from "@/components/layout/PublicLayout";
+import { SEO } from "@/components/SEO";
 import { supabase } from "@/integrations/supabase/client";
 import { cn } from "@/lib/utils";
 
@@ -52,6 +53,11 @@ const Catalog = () => {
 
   return (
     <PublicLayout>
+      <SEO
+        title="קטלוג מוצרים | דלתות קירור וחלקי חילוף"
+        description="קטלוג מוצרים לדלתות קירור, פרזול, מנגנונים, חלקי חילוף, אביזרים לקבלנים ופתרונות קירור ותעשייה."
+        path="/catalog"
+      />
       {/* Header */}
       <section className="border-b border-border bg-gradient-dark py-16 md:py-20">
         <div className="container">
