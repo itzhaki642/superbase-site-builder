@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, Shield, Wrench, Clock, Award, Snowflake, Building2, PackageCheck, Factory, Store, Zap, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PublicLayout } from "@/components/layout/PublicLayout";
+import { SEO } from "@/components/SEO";
+import { ADDRESS, EMAIL, PHONE_DISPLAY, PHONE_OFFICE_DISPLAY } from "@/lib/contact";
 import heroImage from "@/assets/hero-cold-storage.jpg";
 
 const values = [
@@ -35,8 +37,30 @@ const corePillars = [
 ];
 
 const Home = () => {
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "נאור אדיר בע״מ",
+    description: "יבוא, התקנה ושירות לדלתות קירור, חדרי קירור, רמפות, משווי גובה, וילונות מהירים ותריסי גלילה למפעלים וקבלנים.",
+    telephone: [PHONE_DISPLAY, PHONE_OFFICE_DISPLAY],
+    email: EMAIL,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: ADDRESS,
+      addressCountry: "IL",
+    },
+    areaServed: "ישראל",
+    knowsAbout: ["דלתות קירור", "חדרי קירור", "רמפות", "משווי גובה", "תריסי גלילה", "וילונות מהירים", "חלקי חילוף לקבלנים"],
+  };
+
   return (
     <PublicLayout>
+      <SEO
+        title="נאור אדיר בע״מ | דלתות קירור ורמפות"
+        description="יבוא, התקנה ושירות לדלתות קירור, חדרי קירור, רמפות, משווי גובה, וילונות מהירים ותריסי גלילה למפעלים וקבלנים."
+        path="/"
+        jsonLd={localBusinessSchema}
+      />
       {/* HERO */}
       <section className="relative isolate overflow-hidden">
         <div className="absolute inset-0 -z-10">
