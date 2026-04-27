@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Shield, Wrench, Clock, Award, Snowflake, DoorOpen, ChevronLeft, Building2 } from "lucide-react";
+import { ArrowLeft, Shield, Wrench, Clock, Award, Snowflake, DoorOpen, ChevronLeft, Building2, PackageCheck, Factory } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { PublicLayout } from "@/components/layout/PublicLayout";
@@ -9,8 +9,9 @@ import serviceImage from "@/assets/service-image.jpg";
 
 const values = [
   { icon: Award, title: "מעל 25 שנות ניסיון", desc: "וותק מקצועי מוכח בענף הקירור התעשייתי" },
-  { icon: Shield, title: "מומחי רמפות", desc: "היחידים בארץ שבונים ומתקינים רמפות למפעלים" },
-  { icon: Wrench, title: "שירות מקצועי", desc: "צוות טכנאים מיומן ומנוסה" },
+  { icon: PackageCheck, title: "יבואני חלקי חילוף", desc: "אביזרים לדלתות, וילונות, תריסים ורמפות" },
+  { icon: Shield, title: "מומחי רמפות", desc: "בנייה, התקנה וחידוש רמפות למפעלים" },
+  { icon: Wrench, title: "שירות לקבלנים", desc: "אספקה והתקנה מקצועית בפריסה ארצית" },
   { icon: Clock, title: "זמינות גבוהה", desc: "תגובה מהירה לקריאות שירות" },
 ];
 
@@ -38,15 +39,20 @@ const services = [
   },
 ];
 
-const clients = [
+const industryClients = [
   { name: "תנובה", mark: "תנובה", meta: "מוצרי חלב ומזון" },
   { name: "שטראוס", mark: "Strauss", meta: "מזון ומשקאות" },
   { name: "טירת צבי", mark: "טירת צבי", meta: "תעשיית בשר" },
-  { name: "שופרסל", mark: "שופרסל", meta: "רשת קמעונאות" },
-  { name: "אסם", mark: "Osem", meta: "תעשיית מזון" },
   { name: "עוף טוב", mark: "עוף טוב", meta: "ייצור ושיווק" },
-  { name: "קו אופ ישראל", mark: "CO-OP", meta: "קמעונאות" },
-  { name: "נגה גלידות", mark: "Noga", meta: "גלידות וקירור" },
+  { name: "זוגלובק", mark: "זוגלובק", meta: "תעשיית מזון" },
+  { name: "מעדנות", mark: "מעדנות", meta: "ייצור מזון" },
+];
+
+const importSolutions = [
+  "חלקי חילוף לדלתות ודלתות קירור",
+  "אביזרים לוילונות מהירים ותריסי גלילה",
+  "ציוד, רכיבים ופתרונות לרמפות טעינה",
+  "אספקה לקבלנים והתקנה באתרי תעשייה",
 ];
 
 const Home = () => {
@@ -76,8 +82,8 @@ const Home = () => {
               <span className="mt-2 block text-gradient-primary">ברמה הגבוהה ביותר</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85 md:text-xl">
-              נאור אדיר בע״מ מתמחה מעל 25 שנה בבנייה, שירות ואחזקה של חדרי קירור,
-              דלתות קירור, דלתות מהירות, תריסי גלילה, וילונות P.V.C ורמפות למפעלים.
+              נאור אדיר בע״מ היא יבואנית ומתקינה של חלקי חילוף ואביזרים לדלתות קירור,
+              וילונות מהירים, תריסי גלילה ורמפות — עם פתרונות לקבלנים, מפעלים ואתרי תעשייה בכל הארץ.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" className="bg-gradient-accent shadow-glow hover:opacity-90">
@@ -113,6 +119,36 @@ const Home = () => {
         </div>
       </section>
 
+      {/* IMPORTER POSITIONING */}
+      <section className="border-b border-border bg-background py-16 md:py-20">
+        <div className="container">
+          <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+            <div>
+              <div className="inline-flex h-12 w-12 items-center justify-center rounded-md border border-primary/20 bg-primary/10 text-primary">
+                <Factory className="h-6 w-6" />
+              </div>
+              <div className="mt-5 text-xs font-bold uppercase tracking-widest text-primary">יבוא, אספקה והתקנה</div>
+              <h2 className="mt-3 text-3xl font-extrabold text-foreground md:text-4xl">
+                מקור מקצועי אחד לאביזרים, חלקי חילוף והתקנות בשטח
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
+                החברה מייבאת חלקי חילוף ואביזרים לדלתות, דלתות קירור, וילונות מהירים, תריסי גלילה ורמפות — ומספקת אותם לקבלנים לצד התקנות מקצועיות במפעלי מזון, קירור ותעשייה.
+              </p>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {importSolutions.map((solution) => (
+                <div key={solution} className="flex min-h-20 items-center gap-3 rounded-md border border-border/70 bg-card p-4 shadow-sm">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
+                    <PackageCheck className="h-5 w-5" />
+                  </div>
+                  <span className="text-sm font-bold leading-relaxed text-foreground">{solution}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CLIENTS */}
       <section className="border-b border-border bg-muted/30 py-16 md:py-20">
         <div className="container">
@@ -126,12 +162,12 @@ const Home = () => {
                 מוניטין שנבנה עם החברות הגדולות בישראל
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-                מעל 25 שנות פעילות עם מפעלים, רשתות ומותגים מובילים בתחום הקירור התעשייתי, הדלתות והרמפות למפעלים.
+                אביזרים ופתרונות שסופקו והותקנו לאורך השנים במפעלי מזון, קירור ותעשייה מובילים בישראל — ישירות ובשיתוף קבלנים.
               </p>
             </div>
             <div className="rounded-lg border border-border/70 bg-card/80 p-3 shadow-sm backdrop-blur-sm md:p-5">
               <div className="grid grid-cols-2 divide-x divide-y divide-border/70 overflow-hidden rounded-md border border-border/70 sm:grid-cols-4">
-              {clients.map((client) => (
+              {industryClients.map((client) => (
                 <div
                   key={client.name}
                   className="group flex min-h-28 flex-col items-center justify-center bg-background/70 p-5 text-center transition-colors hover:bg-primary/5"
