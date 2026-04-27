@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "./pages/Home";
 import Catalog from "./pages/Catalog";
+import CoolingDoors from "./pages/CoolingDoors";
 import ProductDetail from "./pages/ProductDetail";
 import About from "./pages/About";
 import AccessibilityStatement from "./pages/AccessibilityStatement";
@@ -27,6 +28,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/catalog" element={<Catalog />} />
+          <Route path="/cooling-doors" element={<CoolingDoors />} />
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/accessibility" element={<AccessibilityStatement />} />
