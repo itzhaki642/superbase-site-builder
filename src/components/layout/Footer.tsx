@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import logo from "@/assets/logo.png";
-import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/contact";
+import { PHONE_DISPLAY, PHONE_TEL, PHONE_OFFICE_DISPLAY, PHONE_OFFICE_TEL, EMAIL, ADDRESS, HOURS } from "@/lib/contact";
 
 export function Footer() {
   return (
@@ -46,19 +46,23 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm text-concrete-300">
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 shrink-0 text-primary-glow" />
-                <a href={`tel:${PHONE_TEL}`} className="transition-colors hover:text-primary-glow" dir="ltr">{PHONE_DISPLAY}</a>
+                <span>נייד: <a href={`tel:${PHONE_TEL}`} className="transition-colors hover:text-primary-glow" dir="ltr">{PHONE_DISPLAY}</a></span>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 shrink-0 text-primary-glow" />
+                <span>משרד: <a href={`tel:${PHONE_OFFICE_TEL}`} className="transition-colors hover:text-primary-glow" dir="ltr">{PHONE_OFFICE_DISPLAY}</a></span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 shrink-0 text-primary-glow" />
-                <span dir="ltr">info@naor-adir.co.il</span>
+                <span dir="ltr">{EMAIL}</span>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary-glow" />
-                <span>העליה 47, עפולה</span>
+                <span>{ADDRESS}</span>
               </li>
               <li className="flex items-start gap-2">
                 <Clock className="mt-0.5 h-4 w-4 shrink-0 text-primary-glow" />
-                <span>ימים א׳ - ה׳, 6:30 - 17:00</span>
+                <span>ימים א׳ - ה׳, {HOURS}</span>
               </li>
             </ul>
           </div>
