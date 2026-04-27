@@ -8,7 +8,7 @@ import doorImage from "@/assets/cold-door-detail.jpg";
 import serviceImage from "@/assets/service-image.jpg";
 
 const values = [
-  { icon: Award, title: "דור שני בענף", desc: "ניסיון משפחתי של עשרות שנים בקירור תעשייתי" },
+  { icon: Award, title: "עשרות שנות ניסיון", desc: "ניסיון מעשי רחב בקירור ובפתרונות לתעשייה" },
   { icon: PackageCheck, title: "יבואני חלקי חילוף", desc: "ידיות, עיניים, מיקרו־סוויצ׳ים, פרזול ומנגנונים" },
   { icon: Shield, title: "מומחי רמפות", desc: "מהיחידים בארץ שבונים רמפות למפעלים מאפס" },
   { icon: Store, title: "חנות לקבלנים", desc: "אספקת אביזרים וחלקים לקבלנים ולאנשי מקצוע" },
@@ -291,7 +291,7 @@ const Home = () => {
                 <div className="grid grid-cols-2 gap-6 text-center">
                   <div>
                     <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">+25</div>
-                    <div className="mt-1 text-sm text-white/70">שנות ניסיון ודור שני</div>
+                    <div className="mt-1 text-sm text-white/70">שנות ניסיון בתחום</div>
                   </div>
                   <div>
                     <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">1</div>
