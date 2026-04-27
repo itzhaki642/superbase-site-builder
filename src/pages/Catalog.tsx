@@ -71,8 +71,8 @@ const Catalog = () => {
 
       {/* Filters */}
       <section className="sticky top-16 z-40 border-b border-border bg-background/95 py-4 backdrop-blur-md md:top-20">
-        <div className="container flex flex-col gap-4 md:flex-row md:items-center">
-          <div className="relative flex-1">
+        <div className="container space-y-4">
+          <div className="relative max-w-2xl">
             <Search className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
             <Input
               id="catalog-search"
@@ -84,13 +84,13 @@ const Catalog = () => {
               className="pr-10"
             />
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex gap-2 overflow-x-auto pb-1 md:flex-wrap md:overflow-visible md:pb-0" aria-label="סינון לפי קטגוריה">
             <button
               type="button"
               onClick={() => setActiveCategory(null)}
               aria-pressed={!activeCategory}
               className={cn(
-                "rounded-md border px-4 py-2 text-sm font-medium transition-colors",
+                "shrink-0 rounded-md border px-4 py-2 text-sm font-medium transition-colors",
                 !activeCategory
                   ? "border-primary bg-primary text-primary-foreground"
                   : "border-border bg-background text-foreground hover:border-primary/50",
@@ -105,7 +105,7 @@ const Catalog = () => {
                 onClick={() => setActiveCategory(c.id)}
                 aria-pressed={activeCategory === c.id}
                 className={cn(
-                  "rounded-md border px-4 py-2 text-sm font-medium transition-colors",
+                  "shrink-0 rounded-md border px-4 py-2 text-sm font-medium transition-colors",
                   activeCategory === c.id
                     ? "border-primary bg-primary text-primary-foreground"
                     : "border-border bg-background text-foreground hover:border-primary/50",
