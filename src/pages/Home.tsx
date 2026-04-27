@@ -118,15 +118,15 @@ const Home = () => {
       </section>
 
       {/* IMPORTER POSITIONING */}
-      <section className="border-b border-border bg-background py-16 md:py-20">
+      <section className="border-b border-border bg-background py-12 md:py-20">
         <div className="container">
-          <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="grid items-center gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10">
             <div>
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-md border border-primary/20 bg-primary/10 text-primary">
-                <Factory className="h-6 w-6" />
+              <div className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-primary/20 bg-primary/10 text-primary md:h-12 md:w-12">
+                <Factory className="h-5 w-5 md:h-6 md:w-6" />
               </div>
-              <div className="mt-5 text-xs font-bold uppercase tracking-widest text-primary">יבוא, אספקה והתקנה</div>
-              <h2 className="mt-3 text-3xl font-extrabold text-foreground md:text-4xl">
+              <div className="mt-4 text-xs font-bold uppercase tracking-widest text-primary md:mt-5">יבוא, אספקה והתקנה</div>
+              <h2 className="mt-3 text-2xl font-extrabold leading-tight text-foreground md:text-4xl">
                 מקור מקצועי אחד לאביזרים, חלקי חילוף והתקנות בשטח
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
@@ -137,8 +137,8 @@ const Home = () => {
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
               {importSolutions.map((solution) => (
-                <div key={solution} className="flex min-h-20 items-center gap-3 rounded-md border border-border/70 bg-card p-4 shadow-sm">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
+                <div key={solution} className="flex min-h-16 items-center gap-3 rounded-md border border-border/70 bg-card p-3 shadow-sm md:min-h-20 md:p-4">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary md:h-9 md:w-9">
                     <PackageCheck className="h-5 w-5" />
                   </div>
                   <span className="text-sm font-bold leading-relaxed text-foreground">{solution}</span>
