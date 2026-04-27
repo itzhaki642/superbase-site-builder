@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { z } from "zod";
-import { Award, Shield, Snowflake, Wrench, Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import { Award, Shield, Snowflake, Wrench, Phone, Mail, MapPin, Clock, Send, PackageCheck, Zap } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -19,10 +19,10 @@ const contactSchema = z.object({
 });
 
 const values = [
-  { icon: Award, title: "מעל 25 שנות ניסיון", desc: "וותק מקצועי רחב בעבודה מול מפעלים ולקוחות תעשייתיים" },
-  { icon: Shield, title: "התמחות ייחודית", desc: "היחידים בארץ שבונים ומתקינים רמפות למפעלים" },
-  { icon: Wrench, title: "שירות מקצועי", desc: "צוות טכנאים מיומן ומנוסה" },
-  { icon: Snowflake, title: "פתרון מקיף", desc: "חדרי קירור, דלתות, תריסים, וילונות ואיטום במקום אחד" },
+  { icon: Award, title: "דור שני וניסיון רב", desc: "עסק משפחתי עם עשרות שנות ניסיון מעשי בענף" },
+  { icon: PackageCheck, title: "יבואני אביזרים", desc: "חלקי חילוף לדלתות, קירור, תריסים, וילונות ורמפות" },
+  { icon: Shield, title: "התמחות ייחודית", desc: "מהיחידים בארץ שבונים ומתקינים רמפות למפעלים" },
+  { icon: Zap, title: "שירות מהיר", desc: "מענה זריז לתקלות ומסלולי שירות לפי חוזה" },
 ];
 
 const About = () => {
@@ -76,15 +76,16 @@ const About = () => {
             נאור אדיר בע״מ
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/85">
-            חברת נאור אדיר בע״מ מתמחה מעל 25 שנה בבנייה, שירות ואחזקה עבור חדרי קירור,
-            דלתות קירור, דלתות מהירות, משווי גובה, תריסי גלילה, וילונות P.V.C,
-            שלטרים וכריות אטימה. החברה מלווה מפעלים ולקוחות תעשייתיים משלב האפיון
-            ועד התקנה, שירות ותחזוקה שוטפת.
+            נאור אדיר בע״מ היא חברה משפחתית דור שני בענף הקירור והתעשייה. החברה גדלה משמעותית בשנים האחרונות
+            ומרכזת תחת קורת גג אחת ייבוא חלקי חילוף ואביזרים, התקנות מקצועיות ושירות מהיר למפעלים, קבלנים ואתרי תעשייה.
           </p>
           <p className="mt-4 max-w-3xl text-lg leading-relaxed text-white/85">
-            בנוסף, נאור אדיר היא היחידה בארץ שבונה ומתקינה רמפות למפעלים, לצד שירותי
-            שיפוץ וחידוש רמפות ודלתות קיימות - תוך שמירה על מקצועיות, דייקנות,
-            סדר וניקיון בכל פרויקט.
+            החברה מייבאת חלקים ואביזרים לדלתות קירור, דלתות מהירות, וילונות מהירים, תריסי גלילה,
+            משווי גובה, שלטרים, כריות אטימה ורמפות — ובמקביל בונה דלתות ורמפות, מתקינה בשטח ומספקת שירות תחזוקה מקצועי.
+          </p>
+          <p className="mt-4 max-w-3xl text-lg leading-relaxed text-white/85">
+            היתרון המרכזי הוא שילוב בין מלאי זמין לקבלנים, ידיים מקצועיות בהתקנה, ניסיון של עשרות שנים ומענה שירות זריז
+            שמותאם לצרכי הלקוח ולרמת הזמינות הנדרשת.
           </p>
         </div>
       </section>

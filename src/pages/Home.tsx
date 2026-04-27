@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Shield, Wrench, Clock, Award, Snowflake, DoorOpen, ChevronLeft, Building2, PackageCheck, Factory } from "lucide-react";
+import { ArrowLeft, Shield, Wrench, Clock, Award, Snowflake, DoorOpen, ChevronLeft, Building2, PackageCheck, Factory, Store, Zap, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { PublicLayout } from "@/components/layout/PublicLayout";
@@ -8,11 +8,11 @@ import doorImage from "@/assets/cold-door-detail.jpg";
 import serviceImage from "@/assets/service-image.jpg";
 
 const values = [
-  { icon: Award, title: "מעל 25 שנות ניסיון", desc: "וותק מקצועי מוכח בענף הקירור התעשייתי" },
-  { icon: PackageCheck, title: "יבואני חלקי חילוף", desc: "אביזרים לדלתות, וילונות, תריסים ורמפות" },
-  { icon: Shield, title: "מומחי רמפות", desc: "בנייה, התקנה וחידוש רמפות למפעלים" },
-  { icon: Wrench, title: "שירות לקבלנים", desc: "אספקה והתקנה מקצועית בפריסה ארצית" },
-  { icon: Clock, title: "זמינות גבוהה", desc: "תגובה מהירה לקריאות שירות" },
+  { icon: Award, title: "דור שני בענף", desc: "ניסיון משפחתי של עשרות שנים בקירור תעשייתי" },
+  { icon: PackageCheck, title: "יבואני חלקי חילוף", desc: "ידיות, עיניים, מיקרו־סוויצ׳ים, פרזול ומנגנונים" },
+  { icon: Shield, title: "מומחי רמפות", desc: "מהיחידים בארץ שבונים רמפות למפעלים מאפס" },
+  { icon: Store, title: "חנות לקבלנים", desc: "אספקת אביזרים וחלקים לקבלנים ולאנשי מקצוע" },
+  { icon: Zap, title: "שירות מהיר", desc: "מענה זריז לתקלות, כולל מסלולי שירות לפי חוזה" },
 ];
 
 const services = [
@@ -49,10 +49,16 @@ const industryClients = [
 ];
 
 const importSolutions = [
-  "חלקי חילוף לדלתות ודלתות קירור",
-  "אביזרים לוילונות מהירים ותריסי גלילה",
-  "ציוד, רכיבים ופתרונות לרמפות טעינה",
-  "אספקה לקבלנים והתקנה באתרי תעשייה",
+  "חלקי חילוף לדלתות קירור: ידיות, עיניים, מיקרו־סוויצ׳ים ופרזול",
+  "דלתות קירור, דלתות מהירות, וילונות מהירים ותריסי גלילה",
+  "משווי גובה, שלטרים, כריות אטימה ורמפות טעינה",
+  "אספקה לקבלנים לצד התקנות ושירות באתרי תעשייה",
+];
+
+const corePillars = [
+  { icon: Truck, title: "ייבוא", desc: "מלאי אביזרים וחלקי חילוף לדלתות, קירור, תריסים, וילונות ורמפות." },
+  { icon: Wrench, title: "התקנות", desc: "בניית דלתות קירור מא׳ עד ת׳, חדרי קירור קטנים ורמפות למפעלים." },
+  { icon: Clock, title: "שירות", desc: "קריאות שירות מהירות ופתרונות תחזוקה למפעלים לפי צורך וחוזה." },
 ];
 
 const Home = () => {
@@ -82,8 +88,8 @@ const Home = () => {
               <span className="mt-2 block text-gradient-primary">ברמה הגבוהה ביותר</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85 md:text-xl">
-              נאור אדיר בע״מ היא יבואנית ומתקינה של חלקי חילוף ואביזרים לדלתות קירור,
-              וילונות מהירים, תריסי גלילה ורמפות — עם פתרונות לקבלנים, מפעלים ואתרי תעשייה בכל הארץ.
+              נאור אדיר בע״מ מרכזת במקום אחד ייבוא חלקי חילוף ואביזרים, בניית דלתות ורמפות,
+              התקנות מקצועיות ושירות מהיר למפעלים, קבלנים ואתרי תעשייה בכל הארץ.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" className="bg-gradient-accent shadow-glow hover:opacity-90">
@@ -96,6 +102,25 @@ const Home = () => {
                 <Link to="/about#contact">דברו איתנו</Link>
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CORE PILLARS */}
+      <section className="border-b border-border bg-background py-12 md:py-16">
+        <div className="container">
+          <div className="grid gap-4 md:grid-cols-3">
+            {corePillars.map((pillar) => (
+              <div key={pillar.title} className="flex min-h-36 items-start gap-4 border-r-4 border-primary bg-card p-6 shadow-sm first:border-r-primary">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
+                  <pillar.icon className="h-5 w-5" />
+                </div>
+                <div>
+                  <h2 className="text-xl font-extrabold text-foreground">{pillar.title}</h2>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{pillar.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -132,7 +157,9 @@ const Home = () => {
                 מקור מקצועי אחד לאביזרים, חלקי חילוף והתקנות בשטח
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-                החברה מייבאת חלקי חילוף ואביזרים לדלתות, דלתות קירור, וילונות מהירים, תריסי גלילה ורמפות — ומספקת אותם לקבלנים לצד התקנות מקצועיות במפעלי מזון, קירור ותעשייה.
+                החברה מייבאת מלאי רחב של חלקי חילוף ואביזרים לדלתות קירור, דלתות מהירות,
+                וילונות מהירים, תריסי גלילה, משווי גובה ורמפות. קבלנים ואנשי מקצוע רוכשים ממנה חלקים,
+                ובמקביל הצוות מתקין ומתחזק את המערכות בשטח אצל מפעלים וחברות תעשייה.
               </p>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
@@ -162,7 +189,8 @@ const Home = () => {
                 מוניטין שנבנה עם החברות הגדולות בישראל
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-                אביזרים ופתרונות שסופקו והותקנו לאורך השנים במפעלי מזון, קירור ותעשייה מובילים בישראל — ישירות ובשיתוף קבלנים.
+                לאורך השנים בוצעו אספקות, התקנות ושירותים במפעלי מזון, קירור ותעשייה מובילים בישראל —
+                כולל עבודה ישירה ובשיתוף קבלנים, תוך שמירה על מקצועיות, זמינות וביצוע נקי בשטח.
               </p>
             </div>
             <div className="rounded-lg border border-border/70 bg-card/80 p-3 shadow-sm backdrop-blur-sm md:p-5">
@@ -263,19 +291,19 @@ const Home = () => {
                 <div className="grid grid-cols-2 gap-6 text-center">
                   <div>
                     <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">+25</div>
-                    <div className="mt-1 text-sm text-white/70">שנות ניסיון</div>
+                    <div className="mt-1 text-sm text-white/70">שנות ניסיון ודור שני</div>
                   </div>
                   <div>
                     <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">1</div>
-                    <div className="mt-1 text-sm text-white/70">יחידים בארץ ברמפות למפעלים</div>
+                    <div className="mt-1 text-sm text-white/70">מומחיות ייחודית בבניית רמפות</div>
                   </div>
                   <div>
-                    <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">24/7</div>
-                    <div className="mt-1 text-sm text-white/70">זמינות שירות</div>
+                    <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">3</div>
+                    <div className="mt-1 text-sm text-white/70">ייבוא, התקנות ושירות</div>
                   </div>
                   <div>
-                    <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">100%</div>
-                    <div className="mt-1 text-sm text-white/70">מקצועיות</div>
+                    <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">מהיר</div>
+                    <div className="mt-1 text-sm text-white/70">מענה שירות לפי צורך וחוזה</div>
                   </div>
                 </div>
               </div>
