@@ -8,8 +8,8 @@ import doorImage from "@/assets/cold-door-detail.jpg";
 import serviceImage from "@/assets/service-image.jpg";
 
 const values = [
-  { icon: Award, title: "איכות מוכחת", desc: "מוצרים מהיצרנים המובילים בעולם" },
-  { icon: Shield, title: "אמינות מלאה", desc: "שנים של ניסיון בשוק התעשייתי" },
+  { icon: Award, title: "מעל 25 שנות ניסיון", desc: "וותק מקצועי מוכח בענף הקירור התעשייתי" },
+  { icon: Shield, title: "מומחי רמפות", desc: "היחידים בארץ שבונים ומתקינים רמפות למפעלים" },
   { icon: Wrench, title: "שירות מקצועי", desc: "צוות טכנאים מיומן ומנוסה" },
   { icon: Clock, title: "זמינות גבוהה", desc: "תגובה מהירה לקריאות שירות" },
 ];
@@ -18,21 +18,21 @@ const services = [
   {
     icon: DoorOpen,
     title: "דלתות קירור",
-    desc: "מגוון רחב של דלתות קירור תעשייתיות - דלתות הזזה, דלתות שאלה, דלתות אוטומטיות ועוד",
+    desc: "דלתות קירור, דלתות נגררות, דלתות מתרוממות ודלתות מהירות לתעשייה ולמפעלים",
     image: doorImage,
     link: "/catalog",
   },
   {
     icon: Snowflake,
     title: "חדרי קירור",
-    desc: "התקנה, תחזוקה ושיפוץ של חדרי קירור והקפאה לכלל ענפי התעשייה",
+    desc: "בניית חדרי קירור, שירות ואחזקה, כולל פתרונות איטום ו-P.V.C לפי דרישת הלקוח",
     image: heroImage,
     link: "/about",
   },
   {
     icon: Wrench,
-    title: "שירות ותחזוקה",
-    desc: "שירות מקצועי, תיקונים, חלפי חילוף ותחזוקה שוטפת לחדרי קירור קיימים",
+    title: "רמפות ופתרונות טעינה",
+    desc: "בנייה, התקנה וחידוש רמפות, משווי גובה, תריסי גלילה, שלטרים וכריות אטימה",
     image: serviceImage,
     link: "/about",
   },
@@ -58,15 +58,15 @@ const Home = () => {
           <div className="max-w-3xl animate-fade-in-up">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-white backdrop-blur-md">
               <Snowflake className="h-3.5 w-3.5" />
-              פתרונות קירור תעשייתיים
+              פתרונות קירור, דלתות ורמפות לתעשייה
             </div>
             <h1 className="text-4xl font-extrabold leading-tight text-white text-balance md:text-6xl lg:text-7xl">
-              דלתות קירור ושירות לחדרי קירור
+              דלתות קירור, חדרי קירור ורמפות למפעלים
               <span className="mt-2 block text-gradient-primary">ברמה הגבוהה ביותר</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85 md:text-xl">
-              נאור אדיר בע״מ - מומחים בייבוא, מכירה והתקנה של דלתות קירור תעשייתיות,
-              ובמתן שירות מקצועי לחדרי קירור עבור לקוחות תעשייתיים בכל הארץ.
+              נאור אדיר בע״מ מתמחה מעל 25 שנה בבנייה, שירות ואחזקה של חדרי קירור,
+              דלתות קירור, דלתות מהירות, תריסי גלילה, וילונות P.V.C ורמפות למפעלים.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg" className="bg-gradient-accent shadow-glow hover:opacity-90">
@@ -108,10 +108,10 @@ const Home = () => {
           <div className="mx-auto max-w-2xl text-center">
             <div className="text-xs font-bold uppercase tracking-widest text-primary">תחומי הפעילות שלנו</div>
             <h2 className="mt-3 text-3xl font-extrabold text-foreground md:text-4xl lg:text-5xl">
-              פתרונות מקיפים לעולם הקירור התעשייתי
+              פתרונות מקיפים למפעלים, מחסנים וחדרי קירור
             </h2>
             <p className="mt-4 text-base text-muted-foreground md:text-lg">
-              מהדלת הראשונה ועד התחזוקה השוטפת - אנחנו לצדכם בכל שלב
+              מדלת הקירור ועד הרמפה, האיטום והתחזוקה השוטפת - אנחנו לצדכם בכל שלב
             </p>
           </div>
 
@@ -162,7 +162,7 @@ const Home = () => {
               </h2>
               <p className="mt-4 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
                 צוות המומחים שלנו ישמח לסייע בבחירת הפתרון המתאים ביותר -
-                מייעוץ ראשוני ועד התקנה מלאה ושירות מתמשך.
+                מייעוץ ראשוני ועד התקנה מלאה, בניית רמפות ושירות מתמשך.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button asChild size="lg" className="bg-gradient-accent shadow-glow hover:opacity-90">
@@ -178,12 +178,12 @@ const Home = () => {
               <div className="relative rounded-lg bg-white/5 p-8 backdrop-blur-sm">
                 <div className="grid grid-cols-2 gap-6 text-center">
                   <div>
-                    <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">+15</div>
+                    <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">+25</div>
                     <div className="mt-1 text-sm text-white/70">שנות ניסיון</div>
                   </div>
                   <div>
-                    <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">+500</div>
-                    <div className="mt-1 text-sm text-white/70">פרויקטים</div>
+                    <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">1</div>
+                    <div className="mt-1 text-sm text-white/70">יחידים בארץ ברמפות למפעלים</div>
                   </div>
                   <div>
                     <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">24/7</div>
