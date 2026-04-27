@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Youtube, Music2 } from "lucide-react";
 import logo from "@/assets/logo.png";
-import { PHONE_DISPLAY, PHONE_TEL, PHONE_OFFICE_DISPLAY, PHONE_OFFICE_TEL, EMAIL, ADDRESS, HOURS } from "@/lib/contact";
+import { PHONE_DISPLAY, PHONE_TEL, PHONE_OFFICE_DISPLAY, PHONE_OFFICE_TEL, EMAIL, ADDRESS, HOURS, TIKTOK_URL, YOUTUBE_URL } from "@/lib/contact";
 
 export function Footer() {
   return (
@@ -64,6 +64,14 @@ export function Footer() {
               <li className="flex items-start gap-2">
                 <Clock className="mt-0.5 h-4 w-4 shrink-0 text-primary-glow" />
                 <span>ימים א׳ - ה׳, {HOURS}</span>
+              </li>
+              <li className="flex items-center gap-3 pt-1">
+                <a href={TIKTOK_URL} target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-concrete-300 transition-colors hover:border-primary-glow hover:text-primary-glow">
+                  <Music2 className="h-4 w-4" />
+                </a>
+                <a href={YOUTUBE_URL} target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/10 text-concrete-300 transition-colors hover:border-primary-glow hover:text-primary-glow">
+                  <Youtube className="h-4 w-4" />
+                </a>
               </li>
             </ul>
           </div>
