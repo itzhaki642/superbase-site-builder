@@ -1,11 +1,8 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Shield, Wrench, Clock, Award, Snowflake, DoorOpen, ChevronLeft, Building2, PackageCheck, Factory, Store, Zap, Truck } from "lucide-react";
+import { ArrowLeft, Shield, Wrench, Clock, Award, Snowflake, Building2, PackageCheck, Factory, Store, Zap, Truck } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { PublicLayout } from "@/components/layout/PublicLayout";
 import heroImage from "@/assets/hero-cold-storage.jpg";
-import doorImage from "@/assets/cold-door-detail.jpg";
-import serviceImage from "@/assets/service-image.jpg";
 
 const values = [
   { icon: Award, title: "עשרות שנות ניסיון", desc: "ניסיון מעשי רחב בקירור ובפתרונות לתעשייה" },
@@ -13,30 +10,6 @@ const values = [
   { icon: Shield, title: "מומחי רמפות", desc: "מהיחידים בארץ שבונים רמפות למפעלים מאפס" },
   { icon: Store, title: "חנות לקבלנים", desc: "אספקת אביזרים וחלקים לקבלנים ולאנשי מקצוע" },
   { icon: Zap, title: "שירות מהיר", desc: "מענה זריז לתקלות, כולל מסלולי שירות לפי חוזה" },
-];
-
-const services = [
-  {
-    icon: DoorOpen,
-    title: "דלתות קירור",
-    desc: "דלתות קירור, דלתות נגררות, דלתות מתרוממות ודלתות מהירות לתעשייה ולמפעלים",
-    image: doorImage,
-    link: "/cooling-doors",
-  },
-  {
-    icon: Snowflake,
-    title: "חדרי קירור",
-    desc: "בניית חדרי קירור, שירות ואחזקה, כולל פתרונות איטום ו-P.V.C לפי דרישת הלקוח",
-    image: heroImage,
-    link: "/about",
-  },
-  {
-    icon: Wrench,
-    title: "רמפות ופתרונות טעינה",
-    desc: "בנייה, התקנה וחידוש רמפות, משווי גובה, תריסי גלילה, שלטרים וכריות אטימה",
-    image: serviceImage,
-    link: "/about",
-  },
 ];
 
 const industryClients = [
