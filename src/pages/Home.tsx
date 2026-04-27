@@ -50,28 +50,28 @@ const Home = () => {
           <div className="absolute inset-0 bg-gradient-hero" />
         </div>
 
-        <div className="container relative py-24 md:py-36 lg:py-44">
+        <div className="container relative py-20 md:py-36 lg:py-44">
           <div className="max-w-3xl animate-fade-in-up">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-white backdrop-blur-md">
+            <div className="mb-5 inline-flex max-w-full items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[0.7rem] font-medium uppercase tracking-widest text-white backdrop-blur-md md:px-4 md:text-xs">
               <Snowflake className="h-3.5 w-3.5" />
               פתרונות קירור, דלתות ורמפות לתעשייה
             </div>
-            <h1 className="text-4xl font-extrabold leading-tight text-white text-balance md:text-6xl lg:text-7xl">
+            <h1 className="text-3xl font-extrabold leading-tight text-white text-balance sm:text-4xl md:text-6xl lg:text-7xl">
               דלתות קירור, חדרי קירור ורמפות למפעלים
               <span className="mt-2 block text-gradient-primary">ברמה הגבוהה ביותר</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85 md:text-xl">
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/85 md:mt-6 md:text-xl">
               נאור אדיר בע״מ מרכזת במקום אחד ייבוא חלקי חילוף ואביזרים, בניית דלתות ורמפות,
               התקנות מקצועיות ושירות מהיר למפעלים, קבלנים ואתרי תעשייה בכל הארץ.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild size="lg" className="bg-gradient-accent shadow-glow hover:opacity-90">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap md:mt-8">
+              <Button asChild size="lg" className="w-full bg-gradient-accent shadow-glow hover:opacity-90 sm:w-auto">
                 <Link to="/catalog">
                   צפה בקטלוג המוצרים
                   <ArrowLeft className="mr-1 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white/40 bg-white/10 text-white backdrop-blur-md hover:bg-white/20">
+              <Button asChild size="lg" variant="outline" className="w-full border-white/40 bg-white/10 text-white backdrop-blur-md hover:bg-white/20 sm:w-auto">
                 <Link to="/about#contact">דברו איתנו</Link>
               </Button>
             </div>
