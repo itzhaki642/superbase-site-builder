@@ -8,6 +8,7 @@ import Catalog from "./pages/Catalog";
 import CoolingDoors from "./pages/CoolingDoors";
 import ProductDetail from "./pages/ProductDetail";
 import About from "./pages/About";
+import SocialMedia from "./pages/SocialMedia";
 import AccessibilityStatement from "./pages/AccessibilityStatement";
 import Auth from "./pages/Auth";
 import AdminDashboard from "./pages/admin/AdminDashboard";
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/cooling-doors" element={<CoolingDoors />} />
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/about" element={<About />} />
+          <Route path="/social" element={<SocialMedia />} />
           <Route path="/accessibility" element={<AccessibilityStatement />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/admin" element={<AdminDashboard />} />

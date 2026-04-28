@@ -36,6 +36,7 @@ export function Footer() {
             <ul className="mt-4 space-y-2 text-sm">
               <li><Link to="/" className="text-concrete-300 transition-colors hover:text-primary-glow">בית</Link></li>
               <li><Link to="/catalog" className="text-concrete-300 transition-colors hover:text-primary-glow">קטלוג מוצרים</Link></li>
+              <li><Link to="/social" className="text-concrete-300 transition-colors hover:text-primary-glow">אנחנו ברשתות החברתיות</Link></li>
               <li><Link to="/about" className="text-concrete-300 transition-colors hover:text-primary-glow">אודות ויצירת קשר</Link></li>
               <li><Link to="/accessibility" className="text-concrete-300 transition-colors hover:text-primary-glow">הצהרת נגישות</Link></li>
             </ul>
