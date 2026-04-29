@@ -8,7 +8,7 @@ import heroImage from "@/assets/hero-cold-storage.jpg";
 
 const industryClients = [
   { name: "תנובה", mark: "תנובה", meta: "מוצרי חלב ומזון" },
-  { name: "שטראוס", mark: "Strauss", meta: "מזון ומשקאות" },
+  { name: "שטראוס", mark: "שטראוס", meta: "מזון ומשקאות" },
   { name: "טירת צבי", mark: "טירת צבי", meta: "תעשיית בשר" },
   { name: "עוף טוב", mark: "עוף טוב", meta: "ייצור ושיווק" },
   { name: "זוגלובק", mark: "זוגלובק", meta: "תעשיית מזון" },
