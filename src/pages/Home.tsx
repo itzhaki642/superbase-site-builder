@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Wrench, Clock, Snowflake, Building2, PackageCheck, Factory, Truck } from "lucide-react";
+import { ArrowLeft, Wrench, Clock, Snowflake, Building2, PackageCheck, Factory, Truck, ShieldCheck, BadgeCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PublicLayout } from "@/components/layout/PublicLayout";
 import { SEO } from "@/components/SEO";
@@ -7,6 +7,13 @@ import { ADDRESS, EMAIL, PHONE_DISPLAY, PHONE_OFFICE_DISPLAY } from "@/lib/conta
 import heroImage from "@/assets/hero-cold-storage.jpg";
 
 const industryClients = [
+  { name: "משרד הביטחון", mark: "משרד הביטחון", meta: "מגזר ביטחוני" },
+  { name: "שופרסל", mark: "שופרסל", meta: "קמעונאות ומרכזים לוגיסטיים" },
+  { name: "נסטלה", mark: "נסטלה", meta: "מזון ומשקאות" },
+  { name: "טרה נוגה", mark: "טרה נוגה", meta: "מוצרי חלב" },
+  { name: "בלדי", mark: "בלדי", meta: "תעשיית מזון" },
+  { name: "סנפרוסט", mark: "סנפרוסט", meta: "מזון קפוא" },
+  { name: "דיקסל", mark: "דיקסל", meta: "תעשייה ולוגיסטיקה" },
   { name: "תנובה", mark: "תנובה", meta: "מוצרי חלב ומזון" },
   { name: "שטראוס", mark: "שטראוס", meta: "מזון ומשקאות" },
   { name: "טירת צבי", mark: "טירת צבי", meta: "תעשיית בשר" },
@@ -73,13 +80,25 @@ const Home = () => {
               פתרונות קירור, דלתות ורמפות לתעשייה
             </div>
             <h1 className="text-3xl font-extrabold leading-tight text-white text-balance sm:text-4xl md:text-6xl lg:text-7xl">
-              דלתות קירור, חדרי קירור ורמפות למפעלים
-              <span className="mt-2 block text-gradient-primary">ברמה הגבוהה ביותר</span>
+              נאור אדיר – ייבוא, ייצור ושיווק אביזרי קירור ורמפות לתעשייה
             </h1>
+            <div className="mt-5 max-w-2xl border-r-4 border-primary bg-white/10 p-4 text-base font-extrabold leading-relaxed text-white backdrop-blur-md md:mt-6 md:text-xl">
+              היחידים בישראל המבצעים ייצור כחול-לבן של רמפות הידראוליות מהיסוד.
+            </div>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/85 md:mt-6 md:text-xl">
               נאור אדיר בע״מ מרכזת במקום אחד ייבוא חלקי חילוף ואביזרים, בניית דלתות ורמפות,
               התקנות מקצועיות ושירות מהיר למפעלים, קבלנים ואתרי תעשייה בכל הארץ.
             </p>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <div className="inline-flex items-center gap-2 rounded-md border border-white/25 bg-white/10 px-4 py-3 text-sm font-extrabold text-white backdrop-blur-md">
+                <ShieldCheck className="h-5 w-5 text-primary-glow" />
+                תו תקן ישראלי
+              </div>
+              <div className="inline-flex items-center gap-2 rounded-md border border-white/25 bg-white/10 px-4 py-3 text-sm font-extrabold text-white backdrop-blur-md">
+                <BadgeCheck className="h-5 w-5 text-primary-glow" />
+                ייצור ישראלי
+              </div>
+            </div>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap md:mt-8">
               <Button asChild size="lg" className="w-full bg-gradient-accent shadow-glow hover:opacity-90 sm:w-auto">
                 <Link to="/catalog">
@@ -164,7 +183,7 @@ const Home = () => {
               </p>
             </div>
             <div className="rounded-lg border border-border/70 bg-card/80 p-3 shadow-sm backdrop-blur-sm md:p-5">
-              <div className="grid grid-cols-2 divide-x divide-y divide-border/70 overflow-hidden rounded-md border border-border/70 sm:grid-cols-4">
+              <div className="grid grid-cols-2 divide-x divide-y divide-border/70 overflow-hidden rounded-md border border-border/70 sm:grid-cols-3 lg:grid-cols-4">
               {industryClients.map((client) => (
                 <div
                   key={client.name}
