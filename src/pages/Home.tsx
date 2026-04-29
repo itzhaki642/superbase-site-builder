@@ -10,6 +10,7 @@ import {
   Truck,
   ShieldCheck,
   BadgeCheck,
+  GraduationCap,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PublicLayout } from "@/components/layout/PublicLayout";
@@ -44,6 +45,12 @@ const corePillars = [
   { icon: Truck, title: "ייבוא", desc: "מלאי אביזרים וחלקי חילוף לדלתות, קירור, תריסים, וילונות ורמפות." },
   { icon: Wrench, title: "התקנות", desc: "בניית דלתות קירור מא׳ עד ת׳, חדרי קירור קטנים ורמפות למפעלים." },
   { icon: Clock, title: "שירות", desc: "קריאות שירות מהירות ופתרונות תחזוקה למפעלים לפי צורך וחוזה." },
+];
+
+const contractorAdvantages = [
+  { icon: Truck, title: "מכירה סיטונאית לקבלנים", desc: "אספקה שוטפת של תריסים, דלתות, רמפות וחלקים." },
+  { icon: PackageCheck, title: "מלאי מקצועי מוכן לעבודה", desc: "פתרונות לקבלנים, ספקים ואנשי תחזוקה בכל הארץ." },
+  { icon: GraduationCap, title: "הדרכה טכנית להתקנה עצמית", desc: "ליווי מקצועי שמאפשר לקבלנים לבצע התקנות בשטח." },
 ];
 
 const Home = () => {
@@ -107,7 +114,8 @@ const Home = () => {
             </div>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/85 md:mt-6 md:text-xl">
               נאור אדיר בע״מ מרכזת במקום אחד ייבוא חלקי חילוף ואביזרים, בניית דלתות ורמפות, התקנות מקצועיות ושירות מהיר
-              למפעלים, קבלנים ואתרי תעשייה בכל הארץ.
+              למפעלים, קבלנים ואתרי תעשייה בכל הארץ. בנוסף, החברה מספקת מכירה סיטונאית לקבלנים וספקים, כולל ליווי
+              והדרכה טכנית להתקנה עצמית.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <div className="inline-flex items-center gap-2 rounded-md border border-white/25 bg-white/10 px-4 py-3 text-sm font-extrabold text-white backdrop-blur-md">
@@ -135,6 +143,25 @@ const Home = () => {
                 <Link to="/about#contact">דברו איתנו</Link>
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTRACTORS B2B */}
+      <section className="border-b border-border bg-card py-8 md:py-10">
+        <div className="container">
+          <div className="grid gap-3 md:grid-cols-3">
+            {contractorAdvantages.map((item) => (
+              <div key={item.title} className="flex min-h-28 items-start gap-3 border-r-4 border-primary bg-background p-4 shadow-sm md:p-5">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
+                  <item.icon className="h-5 w-5" />
+                </div>
+                <div>
+                  <h2 className="text-base font-extrabold leading-tight text-foreground md:text-lg">{item.title}</h2>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -173,13 +200,19 @@ const Home = () => {
                 יבוא, אספקה והתקנה
               </div>
               <h2 className="mt-3 text-2xl font-extrabold leading-tight text-foreground md:text-4xl">
-                מקור מקצועי אחד לאביזרים, חלקי חילוף והתקנות בשטח
+                מקור מקצועי לקבלנים: סחורה, חלקים והדרכה טכנית
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
                 החברה מייבאת מלאי רחב של חלקי חילוף ואביזרים לדלתות קירור, דלתות מהירות, וילונות מהירים, תריסי גלילה,
-                משווי גובה ורמפות. קבלנים ואנשי מקצוע רוכשים ממנה חלקים, ובמקביל הצוות מתקין ומתחזק את המערכות בשטח אצל
-                מפעלים וחברות תעשייה.
+                משווי גובה ורמפות. קבלנים וספקים יכולים לרכוש סחורה באופן סיטונאי, לקבל הכוונה טכנית להתקנה עצמית,
+                ובמקביל להיעזר בצוות החברה להתקנות ושירות באתרי תעשייה.
               </p>
+              <Button asChild size="lg" className="mt-6 bg-gradient-accent shadow-glow hover:opacity-90">
+                <Link to="/about#contact">
+                  לקבלת מחירון קבלנים
+                  <ArrowLeft className="mr-1 h-4 w-4" />
+                </Link>
+              </Button>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
               {importSolutions.map((solution) => (
