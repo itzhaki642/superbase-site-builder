@@ -282,29 +282,6 @@ const Home = () => {
                 </Button>
               </div>
             </div>
-            <div className="relative hidden md:block">
-              <div className="absolute inset-0 industrial-grid-bg opacity-10" />
-              <div className="relative rounded-lg bg-white/5 p-8 backdrop-blur-sm">
-                <div className="grid grid-cols-2 gap-6 text-center">
-                  <div>
-                    <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">+25</div>
-                    <div className="mt-1 text-sm text-white/70">שנות ניסיון בתחום</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">1</div>
-                    <div className="mt-1 text-sm text-white/70">מומחיות ייחודית בבניית רמפות</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">3</div>
-                    <div className="mt-1 text-sm text-white/70">ייבוא, התקנות ושירות</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">מהיר</div>
-                    <div className="mt-1 text-sm text-white/70">מענה שירות לפי צורך וחוזה</div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
