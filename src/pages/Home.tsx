@@ -114,7 +114,8 @@ const Home = () => {
             </div>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/85 md:mt-6 md:text-xl">
               נאור אדיר בע״מ מרכזת במקום אחד ייבוא חלקי חילוף ואביזרים, בניית דלתות ורמפות, התקנות מקצועיות ושירות מהיר
-              למפעלים, קבלנים ואתרי תעשייה בכל הארץ.
+              למפעלים, קבלנים ואתרי תעשייה בכל הארץ. בנוסף, החברה מספקת מכירה סיטונאית לקבלנים וספקים, כולל ליווי
+              והדרכה טכנית להתקנה עצמית.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <div className="inline-flex items-center gap-2 rounded-md border border-white/25 bg-white/10 px-4 py-3 text-sm font-extrabold text-white backdrop-blur-md">
@@ -142,6 +143,25 @@ const Home = () => {
                 <Link to="/about#contact">דברו איתנו</Link>
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTRACTORS B2B */}
+      <section className="border-b border-border bg-card py-8 md:py-10">
+        <div className="container">
+          <div className="grid gap-3 md:grid-cols-3">
+            {contractorAdvantages.map((item) => (
+              <div key={item.title} className="flex min-h-28 items-start gap-3 border-r-4 border-primary bg-background p-4 shadow-sm md:p-5">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
+                  <item.icon className="h-5 w-5" />
+                </div>
+                <div>
+                  <h2 className="text-base font-extrabold leading-tight text-foreground md:text-lg">{item.title}</h2>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
