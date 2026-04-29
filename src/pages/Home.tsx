@@ -1,5 +1,16 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Wrench, Clock, Snowflake, Building2, PackageCheck, Factory, Truck, ShieldCheck, BadgeCheck } from "lucide-react";
+import {
+  ArrowLeft,
+  Wrench,
+  Clock,
+  Snowflake,
+  Building2,
+  PackageCheck,
+  Factory,
+  Truck,
+  ShieldCheck,
+  BadgeCheck,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PublicLayout } from "@/components/layout/PublicLayout";
 import { SEO } from "@/components/SEO";
@@ -40,7 +51,8 @@ const Home = () => {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "נאור אדיר בע״מ",
-    description: "יבוא, התקנה ושירות לדלתות קירור, חדרי קירור, רמפות, משווי גובה, וילונות מהירים ותריסי גלילה למפעלים וקבלנים.",
+    description:
+      "יבוא, התקנה ושירות לדלתות קירור, חדרי קירור, רמפות, משווי גובה, וילונות מהירים ותריסי גלילה למפעלים וקבלנים.",
     telephone: [PHONE_DISPLAY, PHONE_OFFICE_DISPLAY],
     email: EMAIL,
     address: {
@@ -49,7 +61,15 @@ const Home = () => {
       addressCountry: "IL",
     },
     areaServed: "ישראל",
-    knowsAbout: ["דלתות קירור", "חדרי קירור", "רמפות", "משווי גובה", "תריסי גלילה", "וילונות מהירים", "חלקי חילוף לקבלנים"],
+    knowsAbout: [
+      "דלתות קירור",
+      "חדרי קירור",
+      "רמפות",
+      "משווי גובה",
+      "תריסי גלילה",
+      "וילונות מהירים",
+      "חלקי חילוף לקבלנים",
+    ],
   };
 
   return (
@@ -80,14 +100,14 @@ const Home = () => {
               פתרונות קירור, דלתות ורמפות לתעשייה
             </div>
             <h1 className="text-3xl font-extrabold leading-tight text-white text-balance sm:text-4xl md:text-6xl lg:text-7xl">
-              נאור אדיר – ייבוא, ייצור ושיווק אביזרי קירור ורמפות לתעשייה
+              ייבוא, ייצור ושיווק אביזרי קירור ורמפות לתעשייה
             </h1>
             <div className="mt-5 max-w-2xl border-r-4 border-primary bg-white/10 p-4 text-base font-extrabold leading-relaxed text-white backdrop-blur-md md:mt-6 md:text-xl">
               היחידים בישראל המבצעים ייצור כחול-לבן של רמפות הידראוליות מהיסוד.
             </div>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/85 md:mt-6 md:text-xl">
-              נאור אדיר בע״מ מרכזת במקום אחד ייבוא חלקי חילוף ואביזרים, בניית דלתות ורמפות,
-              התקנות מקצועיות ושירות מהיר למפעלים, קבלנים ואתרי תעשייה בכל הארץ.
+              נאור אדיר בע״מ מרכזת במקום אחד ייבוא חלקי חילוף ואביזרים, בניית דלתות ורמפות, התקנות מקצועיות ושירות מהיר
+              למפעלים, קבלנים ואתרי תעשייה בכל הארץ.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <div className="inline-flex items-center gap-2 rounded-md border border-white/25 bg-white/10 px-4 py-3 text-sm font-extrabold text-white backdrop-blur-md">
@@ -106,7 +126,12 @@ const Home = () => {
                   <ArrowLeft className="mr-1 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="w-full border-white/40 bg-white/10 text-white backdrop-blur-md hover:bg-white/20 sm:w-auto">
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="w-full border-white/40 bg-white/10 text-white backdrop-blur-md hover:bg-white/20 sm:w-auto"
+              >
                 <Link to="/about#contact">דברו איתנו</Link>
               </Button>
             </div>
@@ -119,7 +144,10 @@ const Home = () => {
         <div className="container">
           <div className="grid gap-4 md:grid-cols-3">
             {corePillars.map((pillar) => (
-              <div key={pillar.title} className="flex min-h-28 items-start gap-3 border-r-4 border-primary bg-card p-4 shadow-sm first:border-r-primary md:min-h-36 md:gap-4 md:p-6">
+              <div
+                key={pillar.title}
+                className="flex min-h-28 items-start gap-3 border-r-4 border-primary bg-card p-4 shadow-sm first:border-r-primary md:min-h-36 md:gap-4 md:p-6"
+              >
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary md:h-11 md:w-11">
                   <pillar.icon className="h-5 w-5" />
                 </div>
@@ -141,19 +169,24 @@ const Home = () => {
               <div className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-primary/20 bg-primary/10 text-primary md:h-12 md:w-12">
                 <Factory className="h-5 w-5 md:h-6 md:w-6" />
               </div>
-              <div className="mt-4 text-xs font-bold uppercase tracking-widest text-primary md:mt-5">יבוא, אספקה והתקנה</div>
+              <div className="mt-4 text-xs font-bold uppercase tracking-widest text-primary md:mt-5">
+                יבוא, אספקה והתקנה
+              </div>
               <h2 className="mt-3 text-2xl font-extrabold leading-tight text-foreground md:text-4xl">
                 מקור מקצועי אחד לאביזרים, חלקי חילוף והתקנות בשטח
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-                החברה מייבאת מלאי רחב של חלקי חילוף ואביזרים לדלתות קירור, דלתות מהירות,
-                וילונות מהירים, תריסי גלילה, משווי גובה ורמפות. קבלנים ואנשי מקצוע רוכשים ממנה חלקים,
-                ובמקביל הצוות מתקין ומתחזק את המערכות בשטח אצל מפעלים וחברות תעשייה.
+                החברה מייבאת מלאי רחב של חלקי חילוף ואביזרים לדלתות קירור, דלתות מהירות, וילונות מהירים, תריסי גלילה,
+                משווי גובה ורמפות. קבלנים ואנשי מקצוע רוכשים ממנה חלקים, ובמקביל הצוות מתקין ומתחזק את המערכות בשטח אצל
+                מפעלים וחברות תעשייה.
               </p>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
               {importSolutions.map((solution) => (
-                <div key={solution} className="flex min-h-16 items-center gap-3 rounded-md border border-border/70 bg-card p-3 shadow-sm md:min-h-20 md:p-4">
+                <div
+                  key={solution}
+                  className="flex min-h-16 items-center gap-3 rounded-md border border-border/70 bg-card p-3 shadow-sm md:min-h-20 md:p-4"
+                >
                   <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary md:h-9 md:w-9">
                     <PackageCheck className="h-5 w-5" />
                   </div>
@@ -173,30 +206,32 @@ const Home = () => {
               <div className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-primary/20 bg-primary/10 text-primary md:h-12 md:w-12">
                 <Building2 className="h-5 w-5 md:h-6 md:w-6" />
               </div>
-              <div className="mt-4 text-xs font-bold uppercase tracking-widest text-primary md:mt-5">לקוחות מובילים</div>
+              <div className="mt-4 text-xs font-bold uppercase tracking-widest text-primary md:mt-5">
+                לקוחות מובילים
+              </div>
               <h2 className="mt-3 text-2xl font-extrabold leading-tight text-foreground md:text-4xl">
                 מוניטין שנבנה עם החברות הגדולות בישראל
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-                לאורך השנים בוצעו אספקות, התקנות ושירותים במפעלי מזון, קירור ותעשייה מובילים בישראל —
-                כולל עבודה ישירה ובשיתוף קבלנים, תוך שמירה על מקצועיות, זמינות וביצוע נקי בשטח.
+                לאורך השנים בוצעו אספקות, התקנות ושירותים במפעלי מזון, קירור ותעשייה מובילים בישראל — כולל עבודה ישירה
+                ובשיתוף קבלנים, תוך שמירה על מקצועיות, זמינות וביצוע נקי בשטח.
               </p>
             </div>
             <div className="rounded-lg border border-border/70 bg-card/80 p-3 shadow-sm backdrop-blur-sm md:p-5">
               <div className="grid grid-cols-2 divide-x divide-y divide-border/70 overflow-hidden rounded-md border border-border/70 sm:grid-cols-3 lg:grid-cols-4">
-              {industryClients.map((client) => (
-                <div
-                  key={client.name}
-                  className="group flex min-h-24 flex-col items-center justify-center bg-background/70 p-4 text-center transition-colors hover:bg-primary/5 md:min-h-28 md:p-5"
-                  aria-label={`לקוח: ${client.name}`}
-                >
-                  <div className="text-xl font-black leading-none text-foreground transition-colors group-hover:text-primary md:text-3xl">
-                    {client.mark}
+                {industryClients.map((client) => (
+                  <div
+                    key={client.name}
+                    className="group flex min-h-24 flex-col items-center justify-center bg-background/70 p-4 text-center transition-colors hover:bg-primary/5 md:min-h-28 md:p-5"
+                    aria-label={`לקוח: ${client.name}`}
+                  >
+                    <div className="text-xl font-black leading-none text-foreground transition-colors group-hover:text-primary md:text-3xl">
+                      {client.mark}
+                    </div>
+                    <div className="mt-3 h-px w-10 bg-primary/40 transition-all group-hover:w-14" />
+                    <div className="mt-3 text-xs font-medium text-muted-foreground">{client.meta}</div>
                   </div>
-                  <div className="mt-3 h-px w-10 bg-primary/40 transition-all group-hover:w-14" />
-                  <div className="mt-3 text-xs font-medium text-muted-foreground">{client.meta}</div>
-                </div>
-              ))}
+                ))}
               </div>
             </div>
           </div>
@@ -213,14 +248,19 @@ const Home = () => {
                 זקוקים לפתרון קירור עבור העסק שלכם?
               </h2>
               <p className="mt-4 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
-                צוות המומחים שלנו ישמח לסייע בבחירת הפתרון המתאים ביותר -
-                מייעוץ ראשוני ועד התקנה מלאה, בניית רמפות ושירות מתמשך.
+                צוות המומחים שלנו ישמח לסייע בבחירת הפתרון המתאים ביותר - מייעוץ ראשוני ועד התקנה מלאה, בניית רמפות
+                ושירות מתמשך.
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap md:mt-8">
                 <Button asChild size="lg" className="w-full bg-gradient-accent shadow-glow hover:opacity-90 sm:w-auto">
                   <Link to="/about#contact">השאירו פרטים</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="w-full border-white/30 bg-transparent text-white hover:bg-white/10 sm:w-auto">
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="w-full border-white/30 bg-transparent text-white hover:bg-white/10 sm:w-auto"
+                >
                   <Link to="/catalog">לקטלוג המוצרים</Link>
                 </Button>
               </div>
