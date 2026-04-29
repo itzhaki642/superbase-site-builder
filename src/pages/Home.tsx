@@ -107,16 +107,6 @@ const Home = () => {
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/85 md:mt-6 md:text-xl">
               פתרונות קירור, דלתות ורמפות למפעלים, ספקים וקבלנים — כולל אספקה סיטונאית והכוונה מקצועית להתקנה עצמית.
             </p>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <div className="inline-flex items-center gap-2 rounded-md border border-white/25 bg-white/10 px-4 py-3 text-sm font-extrabold text-white backdrop-blur-md">
-                <ShieldCheck className="h-5 w-5 text-primary-glow" />
-                תו תקן ישראלי
-              </div>
-              <div className="inline-flex items-center gap-2 rounded-md border border-white/25 bg-white/10 px-4 py-3 text-sm font-extrabold text-white backdrop-blur-md">
-                <BadgeCheck className="h-5 w-5 text-primary-glow" />
-                ייצור ישראלי
-              </div>
-            </div>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap md:mt-8">
               <Button asChild size="lg" className="w-full bg-gradient-accent shadow-glow hover:opacity-90 sm:w-auto">
                 <Link to="/catalog">
@@ -151,8 +141,8 @@ const Home = () => {
                   <div className="mt-1 text-sm text-white/70">ייצור ישראלי לרמפות תעשייתיות</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">מהיר</div>
-                  <div className="mt-1 text-sm text-white/70">מענה שירות לפי צורך וחוזה</div>
+                  <div className="text-3xl font-extrabold text-primary-glow lg:text-4xl">תו תקן</div>
+                  <div className="mt-1 text-sm text-white/70">בעלי תו תקן ישראלי</div>
                 </div>
               </div>
             </div>
