@@ -104,9 +104,7 @@ const Home = () => {
               היחידים בישראל המבצעים ייצור כחול-לבן של רמפות הידראוליות מהיסוד.
             </div>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/85 md:mt-6 md:text-xl">
-              נאור אדיר בע״מ מרכזת במקום אחד ייבוא חלקי חילוף ואביזרים, בניית דלתות ורמפות, התקנות מקצועיות ושירות מהיר
-              למפעלים, קבלנים ואתרי תעשייה בכל הארץ. בנוסף, החברה מספקת מכירה סיטונאית לקבלנים וספקים, כולל ליווי
-              והדרכה טכנית להתקנה עצמית.
+              פתרונות קירור, דלתות ורמפות למפעלים, ספקים וקבלנים — כולל אספקה סיטונאית והכוונה מקצועית להתקנה עצמית.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <div className="inline-flex items-center gap-2 rounded-md border border-white/25 bg-white/10 px-4 py-3 text-sm font-extrabold text-white backdrop-blur-md">
@@ -143,36 +141,11 @@ const Home = () => {
         <div className="container">
           <div className="grid gap-3 md:grid-cols-3">
             {contractorAdvantages.map((item) => (
-              <div key={item.title} className="flex min-h-28 items-start gap-3 border-r-4 border-primary bg-background p-4 shadow-sm md:p-5">
+              <div key={item.title} className="flex min-h-20 items-center gap-3 border-r-4 border-primary bg-background p-4 shadow-sm md:p-5">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
                   <item.icon className="h-5 w-5" />
                 </div>
-                <div>
-                  <h2 className="text-base font-extrabold leading-tight text-foreground md:text-lg">{item.title}</h2>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CORE PILLARS */}
-      <section className="border-b border-border bg-background py-10 md:py-16">
-        <div className="container">
-          <div className="grid gap-4 md:grid-cols-3">
-            {corePillars.map((pillar) => (
-              <div
-                key={pillar.title}
-                className="flex min-h-28 items-start gap-3 border-r-4 border-primary bg-card p-4 shadow-sm first:border-r-primary md:min-h-36 md:gap-4 md:p-6"
-              >
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary md:h-11 md:w-11">
-                  <pillar.icon className="h-5 w-5" />
-                </div>
-                <div>
-                  <h2 className="text-lg font-extrabold text-foreground md:text-xl">{pillar.title}</h2>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{pillar.desc}</p>
-                </div>
+                <h2 className="text-base font-extrabold leading-tight text-foreground md:text-lg">{item.title}</h2>
               </div>
             ))}
           </div>
