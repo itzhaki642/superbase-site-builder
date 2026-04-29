@@ -194,9 +194,9 @@ const Home = () => {
       </section>
 
       {/* CLIENTS */}
-      <section className="border-b border-border bg-muted/30 py-12 md:py-20">
+      <section className="border-b border-border bg-muted/30 py-12 md:py-18">
         <div className="container">
-          <div className="grid items-center gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:gap-10">
+          <div className="grid items-center gap-8 lg:grid-cols-[0.65fr_1.35fr] lg:gap-12">
             <div>
               <div className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-primary/20 bg-primary/10 text-primary md:h-12 md:w-12">
                 <Building2 className="h-5 w-5 md:h-6 md:w-6" />
@@ -208,23 +208,20 @@ const Home = () => {
                 מוניטין שנבנה עם החברות הגדולות בישראל
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-                לאורך השנים בוצעו אספקות, התקנות ושירותים במפעלי מזון, קירור ותעשייה מובילים בישראל — כולל עבודה ישירה
-                ובשיתוף קבלנים, תוך שמירה על מקצועיות, זמינות וביצוע נקי בשטח.
+                ניסיון מוכח מול גופי תעשייה, מזון ולוגיסטיקה מהגדולים בארץ.
               </p>
             </div>
-            <div className="rounded-lg border border-border/70 bg-card/80 p-3 shadow-sm backdrop-blur-sm md:p-5">
-              <div className="grid grid-cols-2 divide-x divide-y divide-border/70 overflow-hidden rounded-md border border-border/70 sm:grid-cols-3 lg:grid-cols-4">
+            <div className="border-y border-border py-4 md:py-6">
+              <div className="grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-3 lg:grid-cols-4">
                 {industryClients.map((client) => (
                   <div
                     key={client.name}
-                    className="group flex min-h-24 flex-col items-center justify-center bg-background/70 p-4 text-center transition-colors hover:bg-primary/5 md:min-h-28 md:p-5"
+                    className="group flex min-h-14 items-center justify-center text-center"
                     aria-label={`לקוח: ${client.name}`}
                   >
-                    <div className="text-xl font-black leading-none text-foreground transition-colors group-hover:text-primary md:text-3xl">
+                    <div className="text-lg font-black leading-none text-foreground/75 transition-colors group-hover:text-primary md:text-2xl">
                       {client.mark}
                     </div>
-                    <div className="mt-3 h-px w-10 bg-primary/40 transition-all group-hover:w-14" />
-                    <div className="mt-3 text-xs font-medium text-muted-foreground">{client.meta}</div>
                   </div>
                 ))}
               </div>
