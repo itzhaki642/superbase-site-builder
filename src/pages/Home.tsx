@@ -91,7 +91,8 @@ const Home = () => {
           <div className="absolute inset-0 bg-gradient-hero" />
         </div>
 
-        <div className="container relative py-20 md:py-36 lg:py-44">
+        <div className="container relative py-20 md:py-28 lg:py-36">
+          <div className="grid items-center gap-10 lg:grid-cols-[1fr_0.72fr]">
           <div className="max-w-3xl animate-fade-in-up">
             <div className="mb-5 inline-flex max-w-full items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[0.7rem] font-medium uppercase tracking-widest text-white backdrop-blur-md md:px-4 md:text-xs">
               <Snowflake className="h-3.5 w-3.5" />
@@ -132,6 +133,30 @@ const Home = () => {
                 <Link to="/about#contact">דברו איתנו</Link>
               </Button>
             </div>
+          </div>
+          <div className="relative hidden animate-fade-in-up md:block">
+            <div className="absolute inset-0 industrial-grid-bg opacity-10" />
+            <div className="relative bg-white/5 p-6 backdrop-blur-sm lg:p-8">
+              <div className="grid grid-cols-2 gap-6 text-center">
+                <div>
+                  <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">+25</div>
+                  <div className="mt-1 text-sm text-white/70">שנות ניסיון בתחום</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">1</div>
+                  <div className="mt-1 text-sm text-white/70">היחידים בארץ שבונים רמפה הידראולית מאפס</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-extrabold text-primary-glow lg:text-4xl">כחול־לבן</div>
+                  <div className="mt-1 text-sm text-white/70">ייצור ישראלי לרמפות תעשייתיות</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">מהיר</div>
+                  <div className="mt-1 text-sm text-white/70">מענה שירות לפי צורך וחוזה</div>
+                </div>
+              </div>
+            </div>
+          </div>
           </div>
         </div>
       </section>
@@ -255,29 +280,6 @@ const Home = () => {
                 >
                   <Link to="/catalog">לקטלוג המוצרים</Link>
                 </Button>
-              </div>
-            </div>
-            <div className="relative hidden md:block">
-              <div className="absolute inset-0 industrial-grid-bg opacity-10" />
-              <div className="relative rounded-lg bg-white/5 p-8 backdrop-blur-sm">
-                <div className="grid grid-cols-2 gap-6 text-center">
-                  <div>
-                    <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">+25</div>
-                    <div className="mt-1 text-sm text-white/70">שנות ניסיון בתחום</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">1</div>
-                    <div className="mt-1 text-sm text-white/70">מומחיות ייחודית בבניית רמפות</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">3</div>
-                    <div className="mt-1 text-sm text-white/70">ייבוא, התקנות ושירות</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-extrabold text-primary-glow lg:text-5xl">מהיר</div>
-                    <div className="mt-1 text-sm text-white/70">מענה שירות לפי צורך וחוזה</div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
