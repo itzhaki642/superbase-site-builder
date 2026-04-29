@@ -200,13 +200,19 @@ const Home = () => {
                 יבוא, אספקה והתקנה
               </div>
               <h2 className="mt-3 text-2xl font-extrabold leading-tight text-foreground md:text-4xl">
-                מקור מקצועי אחד לאביזרים, חלקי חילוף והתקנות בשטח
+                מקור מקצועי לקבלנים: סחורה, חלקים והדרכה טכנית
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
                 החברה מייבאת מלאי רחב של חלקי חילוף ואביזרים לדלתות קירור, דלתות מהירות, וילונות מהירים, תריסי גלילה,
-                משווי גובה ורמפות. קבלנים ואנשי מקצוע רוכשים ממנה חלקים, ובמקביל הצוות מתקין ומתחזק את המערכות בשטח אצל
-                מפעלים וחברות תעשייה.
+                משווי גובה ורמפות. קבלנים וספקים יכולים לרכוש סחורה באופן סיטונאי, לקבל הכוונה טכנית להתקנה עצמית,
+                ובמקביל להיעזר בצוות החברה להתקנות ושירות באתרי תעשייה.
               </p>
+              <Button asChild size="lg" className="mt-6 bg-gradient-accent shadow-glow hover:opacity-90">
+                <Link to="/about#contact">
+                  לקבלת מחירון קבלנים
+                  <ArrowLeft className="mr-1 h-4 w-4" />
+                </Link>
+              </Button>
             </div>
             <div className="grid gap-3 sm:grid-cols-2">
               {importSolutions.map((solution) => (
