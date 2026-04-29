@@ -161,15 +161,13 @@ const Home = () => {
                 <Factory className="h-5 w-5 md:h-6 md:w-6" />
               </div>
               <div className="mt-4 text-xs font-bold uppercase tracking-widest text-primary md:mt-5">
-                יבוא, אספקה והתקנה
+                לקבלנים ולתעשייה
               </div>
               <h2 className="mt-3 text-2xl font-extrabold leading-tight text-foreground md:text-4xl">
-                מקור מקצועי לקבלנים: סחורה, חלקים והדרכה טכנית
+                מקור אחד לסחורה, ייצור והדרכה
               </h2>
               <p className="mt-4 text-base leading-relaxed text-muted-foreground md:text-lg">
-                החברה מייבאת מלאי רחב של חלקי חילוף ואביזרים לדלתות קירור, דלתות מהירות, וילונות מהירים, תריסי גלילה,
-                משווי גובה ורמפות. קבלנים וספקים יכולים לרכוש סחורה באופן סיטונאי, לקבל הכוונה טכנית להתקנה עצמית,
-                ובמקביל להיעזר בצוות החברה להתקנות ושירות באתרי תעשייה.
+                נאור אדיר מספקת לקבלנים ולמפעלים מלאי מקצועי, רמפות בייצור ישראלי וליווי טכני ממוקד — בלי להאריך תהליכים.
               </p>
               <Button asChild size="lg" className="mt-6 bg-gradient-accent shadow-glow hover:opacity-90">
                 <Link to="/about#contact">
@@ -178,13 +176,13 @@ const Home = () => {
                 </Link>
               </Button>
             </div>
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className="grid gap-0 divide-y divide-border border-y border-border">
               {importSolutions.map((solution) => (
                 <div
                   key={solution}
-                  className="flex min-h-16 items-center gap-3 rounded-md border border-border/70 bg-card p-3 shadow-sm md:min-h-20 md:p-4"
+                  className="flex min-h-16 items-center gap-3 bg-background py-4"
                 >
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary md:h-9 md:w-9">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
                     <PackageCheck className="h-5 w-5" />
                   </div>
                   <span className="text-sm font-bold leading-relaxed text-foreground">{solution}</span>
