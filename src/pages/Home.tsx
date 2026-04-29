@@ -10,6 +10,7 @@ import {
   Truck,
   ShieldCheck,
   BadgeCheck,
+  GraduationCap,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PublicLayout } from "@/components/layout/PublicLayout";
@@ -44,6 +45,12 @@ const corePillars = [
   { icon: Truck, title: "ייבוא", desc: "מלאי אביזרים וחלקי חילוף לדלתות, קירור, תריסים, וילונות ורמפות." },
   { icon: Wrench, title: "התקנות", desc: "בניית דלתות קירור מא׳ עד ת׳, חדרי קירור קטנים ורמפות למפעלים." },
   { icon: Clock, title: "שירות", desc: "קריאות שירות מהירות ופתרונות תחזוקה למפעלים לפי צורך וחוזה." },
+];
+
+const contractorAdvantages = [
+  { icon: Truck, title: "מכירה סיטונאית לקבלנים", desc: "אספקה שוטפת של תריסים, דלתות, רמפות וחלקים." },
+  { icon: PackageCheck, title: "מלאי מקצועי מוכן לעבודה", desc: "פתרונות לקבלנים, ספקים ואנשי תחזוקה בכל הארץ." },
+  { icon: GraduationCap, title: "הדרכה טכנית להתקנה עצמית", desc: "ליווי מקצועי שמאפשר לקבלנים לבצע התקנות בשטח." },
 ];
 
 const Home = () => {
