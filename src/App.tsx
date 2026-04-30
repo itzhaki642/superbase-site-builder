@@ -16,7 +16,7 @@ import Auth from "./pages/Auth";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminProducts from "./pages/admin/AdminProducts";
 import AdminCategories from "./pages/admin/AdminCategories";
-import AdminMessages from "./pages/admin/AdminMessages";
+
 import AdminAdmins from "./pages/admin/AdminAdmins";
 import NotFound from "./pages/NotFound.tsx";
 import { ScrollToTop } from "./components/ScrollToTop";
@@ -44,7 +44,7 @@ const App = () => (
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/admin/products" element={<AdminProducts />} />
           <Route path="/admin/categories" element={<AdminCategories />} />
-          <Route path="/admin/messages" element={<AdminMessages />} />
+          
           <Route path="/admin/admins" element={<AdminAdmins />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
