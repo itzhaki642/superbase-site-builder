@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { Snowflake, LayoutDashboard, Package, Tags, MessageSquare, Users, LogOut, Home } from "lucide-react";
+import { Snowflake, LayoutDashboard, Package, Tags, Users, LogOut, Home } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -9,7 +9,6 @@ const navItems = [
   { to: "/admin", label: "דשבורד", icon: LayoutDashboard, end: true },
   { to: "/admin/products", label: "מוצרים", icon: Package },
   { to: "/admin/categories", label: "קטגוריות", icon: Tags },
-  { to: "/admin/messages", label: "פניות", icon: MessageSquare },
   { to: "/admin/admins", label: "מנהלים", icon: Users },
 ];
 
