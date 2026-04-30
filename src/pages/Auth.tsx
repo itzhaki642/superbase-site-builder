@@ -51,7 +51,7 @@ const Auth = () => {
       });
       navigate("/admin");
     } else {
-      const { error } = await supabase.auth.signInWithPassword({ email, password });
+      const { error } = await supabase.auth.signInWithPassword({ email: cleanEmail, password: cleanPassword });
       setLoading(false);
       if (error) {
         toast({ title: "שגיאה בהתחברות", description: error.message, variant: "destructive" });
