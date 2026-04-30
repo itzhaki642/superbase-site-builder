@@ -11,6 +11,13 @@ import rampPlan3d from "@/assets/ramp-plan-3d.webp";
 import rampPlanViews from "@/assets/ramp-plan-views.webp";
 import rampScissorLift from "@/assets/ramp-scissor-lift.webp";
 import rampLiftTable from "@/assets/ramp-lift-table.webp";
+import rampBlueDockFront from "@/assets/ramp-blue-dock-front.jpeg";
+import rampHormannDock from "@/assets/ramp-hormann-dock.jpeg";
+import rampInstallationsCollage from "@/assets/ramp-installations-collage.jpeg";
+import rampBlueGiantOpen from "@/assets/ramp-blue-giant-open.jpeg";
+import rampInkemaInstalled from "@/assets/ramp-inkema-installed.jpeg";
+import rampScissorLiftOutdoor from "@/assets/ramp-scissor-lift-outdoor.jpeg";
+import rampNumberedDiagram from "@/assets/ramp-numbered-diagram.jpeg";
 
 const highlights = [
   { icon: Ruler, title: "תכנון לפי השטח", text: "התאמה למפתח, גובה רצפה, עומסי עבודה וסוגי רכבים באתר." },
@@ -33,11 +40,18 @@ const gallery = [
   { image: rampHydraulicDiagram, title: "מערכת הידראולית", alt: "תרשים של רמפה הידראולית עם צילינדרים ותחנה הידראולית" },
   { image: rampPlan3d, title: "מודל התקנה ברציף", alt: "מודל תלת ממדי של רמפת רציף בקיר מבנה" },
   { image: rampPlanViews, title: "מבטי תכנון וייצור", alt: "מבטי שרטוט של רמפה תעשייתית" },
+  { image: rampBlueDockFront, title: "רמפה הידראולית כחולה — מבט חזיתי", alt: "רמפה הידראולית כחולה עם בוכנות וצידיות צהובות" },
+  { image: rampBlueGiantOpen, title: "רמפת רציף במצב פתוח", alt: "רמפת רציף הידראולית כחולה במצב פרוס לעבודה" },
+  { image: rampHormannDock, title: "רמפת רציף תעשייתית", alt: "רמפת רציף תעשייתית שחורה עם סימוני בטיחות צהובים" },
+  { image: rampInkemaInstalled, title: "רמפה מותקנת ברציף בטון", alt: "רמפה הידראולית מותקנת בתוך גומחת רציף בטון" },
+  { image: rampNumberedDiagram, title: "מרכיבי הרמפה", alt: "תרשים ממוספר של חלקי רמפה הידראולית" },
+  { image: rampInstallationsCollage, title: "התקנות בשטח", alt: "קולאז' התקנות של רמפות הידראוליות במפעלים" },
 ];
 
 const liftSolutions = [
   { image: rampScissorLift, title: "במת הרמה מספריים", alt: "במת הרמה מספריים כחולה למפעל" },
   { image: rampLiftTable, title: "שולחן הרמה הידראולי", alt: "שולחן הרמה הידראולי צהוב ושחור" },
+  { image: rampScissorLiftOutdoor, title: "במת מספריים מותקנת בכניסה", alt: "במת הרמה מספריים מותקנת בכניסה לבניין" },
 ];
 
 const Ramps = () => {
