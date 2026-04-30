@@ -135,23 +135,23 @@ const Home = () => {
           </div>
           <div className="relative animate-fade-in-up">
             <div className="absolute inset-0 industrial-grid-bg opacity-10" />
-            <div className="relative bg-white/5 p-4 backdrop-blur-sm sm:p-6 lg:p-8">
+            <div className="relative rounded-md border border-white/15 bg-concrete-900/75 p-5 shadow-industrial backdrop-blur-xl backdrop-saturate-150 sm:p-6 lg:p-8">
               <div className="grid grid-cols-2 gap-4 text-center sm:gap-6">
                 <div>
-                  <div className="text-3xl font-extrabold text-primary-glow sm:text-4xl lg:text-5xl">+25</div>
-                  <div className="mt-1 text-sm text-white/70">שנות ניסיון בתחום</div>
+                  <div className="text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">+25</div>
+                  <div className="mt-1 text-sm font-medium text-white/85">שנות ניסיון בתחום</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-extrabold text-primary-glow sm:text-4xl lg:text-5xl">1</div>
-                  <div className="mt-1 text-sm text-white/70">היחידים בארץ שבונים רמפה הידראולית מאפס</div>
+                  <div className="text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">1</div>
+                  <div className="mt-1 text-sm font-medium text-white/85">היחידים בארץ שבונים רמפה הידראולית מאפס</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-extrabold text-primary-glow sm:text-3xl lg:text-4xl">כחול־לבן</div>
-                  <div className="mt-1 text-sm text-white/70">ייצור ישראלי לרמפות תעשייתיות</div>
+                  <div className="text-2xl font-extrabold text-white sm:text-3xl lg:text-4xl">כחול־לבן</div>
+                  <div className="mt-1 text-sm font-medium text-white/85">ייצור ישראלי לרמפות תעשייתיות</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-extrabold text-primary-glow sm:text-3xl lg:text-4xl">תו תקן</div>
-                  <div className="mt-1 text-sm text-white/70">בעלי תו תקן ישראלי</div>
+                  <div className="text-2xl font-extrabold text-white sm:text-3xl lg:text-4xl">תו תקן</div>
+                  <div className="mt-1 text-sm font-medium text-white/85">בעלי תו תקן ישראלי</div>
                 </div>
               </div>
             </div>
