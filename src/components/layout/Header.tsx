@@ -3,7 +3,7 @@ import { Menu, X, Phone } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-naor-adir.png";
 
 const navItems = [
   { to: "/", label: "בית" },
@@ -26,7 +26,7 @@ export function Header() {
           <img
             src={logo}
             alt="נאור אדיר בע״מ - שירות ואחזקה לדלתות קירור"
-            className="h-12 w-12 rounded-md object-contain transition-transform group-hover:scale-105 md:h-14 md:w-14"
+            className="h-12 w-12 object-contain transition-transform group-hover:scale-105 md:h-14 md:w-14"
           />
           <div className="leading-tight">
             <div className="text-lg font-extrabold tracking-tight text-foreground md:text-xl">
