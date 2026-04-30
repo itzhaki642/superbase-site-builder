@@ -27,10 +27,14 @@ const Auth = () => {
     e.preventDefault();
     setLoading(true);
 
+    // Clean invisible/whitespace chars that often come from paste
+    const cleanEmail = email.replace(/[\u200B-\u200D\uFEFF\u00A0]/g, "").trim().toLowerCase();
+    const cleanPassword = password.replace(/[\u200B-\u200D\uFEFF]/g, "");
+
     if (mode === "signup") {
       const { error } = await supabase.auth.signUp({
-        email,
-        password,
+        email: cleanEmail,
+        password: cleanPassword,
         options: {
           emailRedirectTo: `${window.location.origin}/admin`,
           data: { full_name: fullName },
@@ -47,7 +51,7 @@ const Auth = () => {
       });
       navigate("/admin");
     } else {
-      const { error } = await supabase.auth.signInWithPassword({ email, password });
+      const { error } = await supabase.auth.signInWithPassword({ email: cleanEmail, password: cleanPassword });
       setLoading(false);
       if (error) {
         toast({ title: "שגיאה בהתחברות", description: error.message, variant: "destructive" });
@@ -100,7 +104,7 @@ const Auth = () => {
                 id="email"
                 type="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setEmail(e.target.value.replace(/[\u200B-\u200D\uFEFF\u00A0\s]/g, ""))}
                 required
                 className="mt-1.5"
                 dir="ltr"
