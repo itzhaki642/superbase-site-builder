@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, Youtube, Music2 } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-naor-adir.png";
 import { PHONE_DISPLAY, PHONE_TEL, PHONE_OFFICE_DISPLAY, PHONE_OFFICE_TEL, EMAIL, ADDRESS, HOURS, TIKTOK_URL, YOUTUBE_URL } from "@/lib/contact";
 
 export function Footer() {
@@ -14,7 +14,7 @@ export function Footer() {
               <img
                 src={logo}
                 alt="נאור אדיר בע״מ"
-                className="h-12 w-12 rounded-md bg-white/95 object-contain p-1"
+                className="h-14 w-14 object-contain"
               />
               <div>
                 <div className="text-lg font-extrabold tracking-tight text-white">נאור אדיר בע״מ</div>
