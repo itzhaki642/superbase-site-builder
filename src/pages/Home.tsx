@@ -15,6 +15,9 @@ import { PublicLayout } from "@/components/layout/PublicLayout";
 import { SEO } from "@/components/SEO";
 import { ADDRESS, EMAIL, PHONE_DISPLAY, PHONE_OFFICE_DISPLAY } from "@/lib/contact";
 import heroImage from "@/assets/hero-cold-storage.jpg";
+import loadingDocksImage from "@/assets/field-project-loading-docks.jpeg";
+import hydraulicRampImage from "@/assets/field-project-hydraulic-ramp.jpeg";
+import industrialDoorImage from "@/assets/field-project-industrial-door.jpeg";
 
 const industryClients = [
   { name: "משרד הביטחון", mark: "משרד הביטחון", meta: "מגזר ביטחוני" },
@@ -42,6 +45,12 @@ const factorySolutions = [
   { icon: Wrench, title: "התקנות ותחזוקה", text: "שירות למערכי קירור, דלתות ופתרונות תעשייתיים." },
   { icon: Factory, title: "רמפות למפעלים", text: "ייצור כחול־לבן של רמפות הידראוליות מהיסוד." },
   { icon: PackageCheck, title: "פתרון תפעולי מלא", text: "משלב הייעוץ ועד שירות שוטף בשטח." },
+];
+
+const fieldProjects = [
+  { image: loadingDocksImage, title: "רציפי טעינה למפעלים", alt: "רציפי טעינה ודלתות תעשייתיות במפעל" },
+  { image: hydraulicRampImage, title: "רמפה הידראולית תעשייתית", alt: "רמפה הידראולית תעשייתית בשטח מפעל" },
+  { image: industrialDoorImage, title: "תריס ודלת תעשייתית", alt: "תריס תעשייתי גדול במפעל" },
 ];
 
 const Home = () => {
