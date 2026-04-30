@@ -213,12 +213,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CLIENTS */}
       <section className="border-b border-border bg-muted/30 py-12 md:py-18">
