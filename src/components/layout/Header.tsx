@@ -8,6 +8,7 @@ import logo from "@/assets/logo.png";
 const navItems = [
   { to: "/", label: "בית" },
   { to: "/catalog", label: "קטלוג מוצרים" },
+  { to: "/ramps", label: "רמפות" },
   { to: "/contractors", label: "קבלנים" },
   { to: "/social", label: "אנחנו ברשתות החברתיות" },
   { to: "/about", label: "אודות ויצירת קשר" },
