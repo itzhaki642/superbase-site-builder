@@ -10,7 +10,16 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { PublicLayout } from "@/components/layout/PublicLayout";
 import { SEO } from "@/components/SEO";
-import { createWhatsAppUrl, PHONE_DISPLAY, PHONE_TEL, PHONE_OFFICE_DISPLAY, PHONE_OFFICE_TEL, EMAIL, ADDRESS, HOURS } from "@/lib/contact";
+import {
+  createWhatsAppUrl,
+  PHONE_DISPLAY,
+  PHONE_TEL,
+  PHONE_OFFICE_DISPLAY,
+  PHONE_OFFICE_TEL,
+  EMAIL,
+  ADDRESS,
+  HOURS,
+} from "@/lib/contact";
 
 const contactSchema = z.object({
   name: z.string().trim().min(2, "שם חייב להכיל לפחות 2 תווים").max(100, "שם ארוך מדי"),
@@ -22,7 +31,7 @@ const contactSchema = z.object({
 const values = [
   { icon: Award, title: "ניסיון רב בענף", desc: "עשרות שנות ניסיון מעשי בקירור ובפתרונות לתעשייה" },
   { icon: PackageCheck, title: "יבואני אביזרים", desc: "חלקי חילוף לדלתות, קירור, תריסים, וילונות ורמפות" },
-  { icon: Shield, title: "התמחות ייחודית", desc: "מהיחידים בארץ שבונים ומתקינים רמפות למפעלים" },
+  { icon: Shield, title: "התמחות ייחודית", desc: "היחידים בארץ הבונים רמפות הידוראליות מאפס" },
   { icon: Zap, title: "שירות מהיר", desc: "מענה זריז לתקלות ומסלולי שירות לפי חוזה" },
 ];
 
@@ -78,16 +87,14 @@ const About = () => {
       <section className="border-b border-border bg-gradient-dark py-16 md:py-24">
         <div className="container">
           <div className="text-xs font-bold uppercase tracking-widest text-primary-glow">אודות החברה</div>
-          <h1 className="mt-3 text-4xl font-extrabold text-white md:text-5xl lg:text-6xl">
-            נאור אדיר בע״מ
-          </h1>
+          <h1 className="mt-3 text-4xl font-extrabold text-white md:text-5xl lg:text-6xl">נאור אדיר בע״מ</h1>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/85">
-            נאור אדיר בע״מ היא חברה מקצועית בענף הקירור והתעשייה. החברה גדלה משמעותית בשנים האחרונות
-            ומרכזת תחת קורת גג אחת ייבוא חלקי חילוף ואביזרים, התקנות מקצועיות ושירות מהיר למפעלים, קבלנים ואתרי תעשייה.
+            נאור אדיר בע״מ היא חברה מקצועית בענף הקירור והתעשייה. החברה גדלה משמעותית בשנים האחרונות ומרכזת תחת קורת גג
+            אחת ייבוא חלקי חילוף ואביזרים, התקנות מקצועיות ושירות מהיר למפעלים, קבלנים ואתרי תעשייה.
           </p>
           <p className="mt-4 max-w-3xl text-lg leading-relaxed text-white/85">
-            החברה מייבאת חלקים ואביזרים לדלתות קירור, דלתות מהירות, וילונות מהירים, תריסי גלילה,
-            משווי גובה, שלטרים, כריות אטימה ורמפות — ובמקביל בונה דלתות ורמפות, מתקינה בשטח ומספקת שירות תחזוקה מקצועי.
+            החברה מייבאת חלקים ואביזרים לדלתות קירור, דלתות מהירות, וילונות מהירים, תריסי גלילה, משווי גובה, שלטרים,
+            כריות אטימה ורמפות — ובמקביל בונה דלתות ורמפות, מתקינה בשטח ומספקת שירות תחזוקה מקצועי.
           </p>
           <p className="mt-4 max-w-3xl text-lg leading-relaxed text-white/85">
             היתרון המרכזי הוא שילוב בין מלאי זמין לקבלנים, ידיים מקצועיות בהתקנה, ניסיון של עשרות שנים ומענה שירות זריז
@@ -129,33 +136,48 @@ const About = () => {
               </p>
 
               <div className="mt-8 space-y-4">
-                <a href={`tel:${PHONE_TEL}`} className="flex items-center gap-4 rounded-lg border border-border bg-card p-4 transition-colors hover:border-primary">
+                <a
+                  href={`tel:${PHONE_TEL}`}
+                  className="flex items-center gap-4 rounded-lg border border-border bg-card p-4 transition-colors hover:border-primary"
+                >
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
                     <Phone className="h-5 w-5" />
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground">טלפון נייד</div>
-                    <div className="font-bold text-foreground" dir="ltr">{PHONE_DISPLAY}</div>
+                    <div className="font-bold text-foreground" dir="ltr">
+                      {PHONE_DISPLAY}
+                    </div>
                   </div>
                 </a>
 
-                <a href={`tel:${PHONE_OFFICE_TEL}`} className="flex items-center gap-4 rounded-lg border border-border bg-card p-4 transition-colors hover:border-primary">
+                <a
+                  href={`tel:${PHONE_OFFICE_TEL}`}
+                  className="flex items-center gap-4 rounded-lg border border-border bg-card p-4 transition-colors hover:border-primary"
+                >
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
                     <Phone className="h-5 w-5" />
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground">טלפון משרד</div>
-                    <div className="font-bold text-foreground" dir="ltr">{PHONE_OFFICE_DISPLAY}</div>
+                    <div className="font-bold text-foreground" dir="ltr">
+                      {PHONE_OFFICE_DISPLAY}
+                    </div>
                   </div>
                 </a>
 
-                <a href={`mailto:${EMAIL}`} className="flex items-center gap-4 rounded-lg border border-border bg-card p-4 transition-colors hover:border-primary">
+                <a
+                  href={`mailto:${EMAIL}`}
+                  className="flex items-center gap-4 rounded-lg border border-border bg-card p-4 transition-colors hover:border-primary"
+                >
                   <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
                     <Mail className="h-5 w-5" />
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground">אימייל</div>
-                    <div className="font-bold text-foreground" dir="ltr">{EMAIL}</div>
+                    <div className="font-bold text-foreground" dir="ltr">
+                      {EMAIL}
+                    </div>
                   </div>
                 </a>
 
