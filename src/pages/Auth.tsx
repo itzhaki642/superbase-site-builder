@@ -104,7 +104,7 @@ const Auth = () => {
                 id="email"
                 type="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setEmail(e.target.value.replace(/[\u200B-\u200D\uFEFF\u00A0\s]/g, ""))}
                 required
                 className="mt-1.5"
                 dir="ltr"
