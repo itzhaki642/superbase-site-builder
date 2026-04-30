@@ -7,6 +7,8 @@ import {
   Factory,
   Truck,
   GraduationCap,
+  Wrench,
+  DoorOpen,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PublicLayout } from "@/components/layout/PublicLayout";
@@ -30,16 +32,16 @@ const industryClients = [
   { name: "מעדנות", mark: "מעדנות", meta: "ייצור מזון" },
 ];
 
-const importSolutions = [
-  "סחורה מקצועית לקבלנים וספקים",
-  "רמפות הידראוליות בייצור כחול־לבן",
-  "הדרכה טכנית להתקנה עצמית",
+const contractorSolutions = [
+  { icon: Truck, title: "קנייה סיטונאית", text: "מלאי מקצועי לקבלנים, ספקים ומתקינים." },
+  { icon: DoorOpen, title: "כל אביזרי הקירור", text: "תריסים, דלתות, רמפות, חלקים וציוד משלים." },
+  { icon: GraduationCap, title: "ליווי מקצועי", text: "הכוונה טכנית והתאמה לפי סוג הפרויקט." },
 ];
 
-const contractorAdvantages = [
-  { icon: Truck, title: "מכירה סיטונאית" },
-  { icon: PackageCheck, title: "תריסים, דלתות ורמפות" },
-  { icon: GraduationCap, title: "הדרכה לקבלנים" },
+const factorySolutions = [
+  { icon: Wrench, title: "התקנות ותחזוקה", text: "שירות למערכי קירור, דלתות ופתרונות תעשייתיים." },
+  { icon: Factory, title: "רמפות למפעלים", text: "ייצור כחול־לבן של רמפות הידראוליות מהיסוד." },
+  { icon: PackageCheck, title: "פתרון תפעולי מלא", text: "משלב הייעוץ ועד שירות שוטף בשטח." },
 ];
 
 const Home = () => {
