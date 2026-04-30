@@ -21,6 +21,11 @@ import loadingDockInterior from "@/assets/loading-dock-interior.jpeg";
 import loadingDockExterior from "@/assets/loading-dock-exterior.jpeg";
 import hydraulicRampImage from "@/assets/field-project-hydraulic-ramp.jpeg";
 import industrialDoorImage from "@/assets/field-project-industrial-door.jpeg";
+import rampBlueDockFront from "@/assets/ramp-blue-dock-front.jpeg";
+import rampBlueGiantOpen from "@/assets/ramp-blue-giant-open.jpeg";
+import rampHormannDock from "@/assets/ramp-hormann-dock.jpeg";
+import rampInkemaInstalled from "@/assets/ramp-inkema-installed.jpeg";
+import rampInstallationsCollage from "@/assets/ramp-installations-collage.jpeg";
 
 const industryClients = [
   { name: "משרד הביטחון", mark: "משרד הביטחון", meta: "מגזר ביטחוני" },
@@ -55,13 +60,22 @@ const loadingDockSlides = [
   { image: loadingDockExterior, alt: "רציפי טעינה חיצוניים עם דלתות תעשייתיות" },
 ];
 
+const hydraulicRampSlides = [
+  { image: hydraulicRampImage, alt: "רמפה הידראולית תעשייתית בשטח מפעל" },
+  { image: rampBlueDockFront, alt: "רמפה הידראולית כחולה — מבט חזיתי" },
+  { image: rampBlueGiantOpen, alt: "רמפת רציף הידראולית במצב פתוח" },
+  { image: rampHormannDock, alt: "רמפת רציף תעשייתית עם סימוני בטיחות" },
+  { image: rampInkemaInstalled, alt: "רמפה מותקנת בגומחת רציף בטון" },
+  { image: rampInstallationsCollage, alt: "התקנות רמפות במפעלים" },
+];
+
 const fieldProjects = [
   {
     images: loadingDockSlides,
     title: "רציפי טעינה למפעלים",
     alt: "רציפי טעינה ודלתות תעשייתיות במפעל",
   },
-  { images: [{ image: hydraulicRampImage, alt: "רמפה הידראולית תעשייתית בשטח מפעל" }], title: "רמפה הידראולית תעשייתית", alt: "רמפה הידראולית תעשייתית בשטח מפעל" },
+  { images: hydraulicRampSlides, title: "רמפה הידראולית תעשייתית", alt: "רמפה הידראולית תעשייתית בשטח מפעל" },
   { images: [{ image: industrialDoorImage, alt: "תריס תעשייתי גדול במפעל" }], title: "תריס ודלת תעשייתית", alt: "תריס תעשייתי גדול במפעל" },
 ];
 
