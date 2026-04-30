@@ -8,6 +8,28 @@ import { Card } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
+const invisibleCharsRegex = /[\u200B-\u200F\u202A-\u202E\u2066-\u2069\uFEFF]/g;
+
+const sanitizeEmail = (value: string) =>
+  value.replace(invisibleCharsRegex, "").replace(/[\s\u00A0]+/g, "").trim().toLowerCase();
+
+const sanitizePassword = (value: string) =>
+  value.replace(invisibleCharsRegex, "").replace(/\u00A0/g, " ").trim();
+
+const extractCredentials = (value: string) => {
+  const cleaned = value.replace(invisibleCharsRegex, "").replace(/\u00A0/g, " ");
+  const emailMatch = cleaned.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i);
+  const emailValue = emailMatch?.[0] ?? cleaned;
+  const passwordValue = emailMatch
+    ? cleaned.slice((emailMatch.index ?? 0) + emailValue.length).trim()
+    : "";
+
+  return {
+    email: sanitizeEmail(emailValue),
+    password: sanitizePassword(passwordValue),
+  };
+};
+
 const Auth = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -27,9 +49,9 @@ const Auth = () => {
     e.preventDefault();
     setLoading(true);
 
-    // Clean invisible/whitespace chars that often come from paste
-    const cleanEmail = email.replace(/[\u200B-\u200D\uFEFF\u00A0]/g, "").trim().toLowerCase();
-    const cleanPassword = password.replace(/[\u200B-\u200D\uFEFF]/g, "");
+    // Clean invisible/RTL chars that often come from copying credentials in Hebrew chats
+    const cleanEmail = sanitizeEmail(email);
+    const cleanPassword = sanitizePassword(password);
 
     if (mode === "signup") {
       const { error } = await supabase.auth.signUp({
@@ -106,7 +128,16 @@ const Auth = () => {
                 inputMode="email"
                 autoComplete="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value.replace(/[\u200B-\u200D\uFEFF\u00A0\s]/g, ""))}
+                onChange={(e) => setEmail(sanitizeEmail(e.target.value))}
+                onPaste={(e) => {
+                  const pasted = e.clipboardData.getData("text");
+                  const credentials = extractCredentials(pasted);
+                  if (credentials.email) {
+                    e.preventDefault();
+                    setEmail(credentials.email);
+                    if (credentials.password) setPassword(credentials.password);
+                  }
+                }}
                 required
                 className="mt-1.5"
                 dir="ltr"
@@ -119,7 +150,16 @@ const Auth = () => {
                 id="password"
                 type="password"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => setPassword(sanitizePassword(e.target.value))}
+                onPaste={(e) => {
+                  const pasted = e.clipboardData.getData("text");
+                  const credentials = extractCredentials(pasted);
+                  if (credentials.password) {
+                    e.preventDefault();
+                    setPassword(credentials.password);
+                    if (credentials.email) setEmail(credentials.email);
+                  }
+                }}
                 required
                 minLength={6}
                 className="mt-1.5"
