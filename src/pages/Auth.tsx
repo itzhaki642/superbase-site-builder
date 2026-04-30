@@ -27,10 +27,14 @@ const Auth = () => {
     e.preventDefault();
     setLoading(true);
 
+    // Clean invisible/whitespace chars that often come from paste
+    const cleanEmail = email.replace(/[\u200B-\u200D\uFEFF\u00A0]/g, "").trim().toLowerCase();
+    const cleanPassword = password.replace(/[\u200B-\u200D\uFEFF]/g, "");
+
     if (mode === "signup") {
       const { error } = await supabase.auth.signUp({
-        email,
-        password,
+        email: cleanEmail,
+        password: cleanPassword,
         options: {
           emailRedirectTo: `${window.location.origin}/admin`,
           data: { full_name: fullName },
