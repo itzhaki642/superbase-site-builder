@@ -15,6 +15,9 @@ import { PublicLayout } from "@/components/layout/PublicLayout";
 import { SEO } from "@/components/SEO";
 import { ADDRESS, EMAIL, PHONE_DISPLAY, PHONE_OFFICE_DISPLAY } from "@/lib/contact";
 import heroImage from "@/assets/hero-cold-storage.jpg";
+import loadingDocksImage from "@/assets/field-project-loading-docks.jpeg";
+import hydraulicRampImage from "@/assets/field-project-hydraulic-ramp.jpeg";
+import industrialDoorImage from "@/assets/field-project-industrial-door.jpeg";
 
 const industryClients = [
   { name: "משרד הביטחון", mark: "משרד הביטחון", meta: "מגזר ביטחוני" },
@@ -42,6 +45,12 @@ const factorySolutions = [
   { icon: Wrench, title: "התקנות ותחזוקה", text: "שירות למערכי קירור, דלתות ופתרונות תעשייתיים." },
   { icon: Factory, title: "רמפות למפעלים", text: "ייצור כחול־לבן של רמפות הידראוליות מהיסוד." },
   { icon: PackageCheck, title: "פתרון תפעולי מלא", text: "משלב הייעוץ ועד שירות שוטף בשטח." },
+];
+
+const fieldProjects = [
+  { image: loadingDocksImage, title: "רציפי טעינה למפעלים", alt: "רציפי טעינה ודלתות תעשייתיות במפעל" },
+  { image: hydraulicRampImage, title: "רמפה הידראולית תעשייתית", alt: "רמפה הידראולית תעשייתית בשטח מפעל" },
+  { image: industrialDoorImage, title: "תריס ודלת תעשייתית", alt: "תריס תעשייתי גדול במפעל" },
 ];
 
 const Home = () => {
@@ -210,6 +219,40 @@ const Home = () => {
             <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
               <Link to="/contractors">עמוד לקבלנים</Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* FIELD PROJECTS */}
+      <section className="border-b border-border bg-background py-12 md:py-20">
+        <div className="container">
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <div className="text-xs font-bold uppercase tracking-widest text-primary">פרויקטים מהשטח</div>
+              <h2 className="mt-3 text-2xl font-extrabold leading-tight text-foreground md:text-4xl">
+                התקנות ורמפות במפעלים פעילים
+              </h2>
+            </div>
+            <p className="max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
+              עבודות אמיתיות בשטח — דלתות, רציפי טעינה ורמפות למערכי תעשייה ולוגיסטיקה.
+            </p>
+          </div>
+          <div className="mt-8 grid gap-4 md:grid-cols-3 md:gap-5">
+            {fieldProjects.map((project) => (
+              <figure key={project.title} className="group overflow-hidden bg-card shadow-sm">
+                <div className="aspect-[4/5] overflow-hidden md:aspect-[4/3]">
+                  <img
+                    src={project.image}
+                    alt={project.alt}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption className="border-r-4 border-primary p-4 text-base font-extrabold text-foreground">
+                  {project.title}
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </div>
       </section>
