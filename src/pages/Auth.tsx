@@ -102,7 +102,9 @@ const Auth = () => {
               <Label htmlFor="email">אימייל</Label>
               <Input
                 id="email"
-                type="email"
+                type="text"
+                inputMode="email"
+                autoComplete="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value.replace(/[\u200B-\u200D\uFEFF\u00A0\s]/g, ""))}
                 required
