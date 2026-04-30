@@ -208,7 +208,7 @@ const Home = () => {
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
-              <Link to="/catalog">לצפייה במוצרים</Link>
+              <Link to="/contractors">עמוד לקבלנים</Link>
             </Button>
           </div>
         </div>
