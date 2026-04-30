@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowLeft,
@@ -16,6 +17,8 @@ import { SEO } from "@/components/SEO";
 import { ADDRESS, EMAIL, PHONE_DISPLAY, PHONE_OFFICE_DISPLAY } from "@/lib/contact";
 import heroImage from "@/assets/hero-cold-storage.jpg";
 import loadingDocksImage from "@/assets/field-project-loading-docks.jpeg";
+import loadingDockInterior from "@/assets/loading-dock-interior.jpeg";
+import loadingDockExterior from "@/assets/loading-dock-exterior.jpeg";
 import hydraulicRampImage from "@/assets/field-project-hydraulic-ramp.jpeg";
 import industrialDoorImage from "@/assets/field-project-industrial-door.jpeg";
 
@@ -47,11 +50,60 @@ const factorySolutions = [
   { icon: PackageCheck, title: "פתרון תפעולי מלא", text: "משלב הייעוץ ועד שירות שוטף בשטח." },
 ];
 
-const fieldProjects = [
-  { image: loadingDocksImage, title: "רציפי טעינה למפעלים", alt: "רציפי טעינה ודלתות תעשייתיות במפעל" },
-  { image: hydraulicRampImage, title: "רמפה הידראולית תעשייתית", alt: "רמפה הידראולית תעשייתית בשטח מפעל" },
-  { image: industrialDoorImage, title: "תריס ודלת תעשייתית", alt: "תריס תעשייתי גדול במפעל" },
+const loadingDockSlides = [
+  { image: loadingDockInterior, alt: "רמפות הידראוליות בתוך מפעל לוגיסטי" },
+  { image: loadingDockExterior, alt: "רציפי טעינה חיצוניים עם דלתות תעשייתיות" },
 ];
+
+const fieldProjects = [
+  {
+    images: loadingDockSlides,
+    title: "רציפי טעינה למפעלים",
+    alt: "רציפי טעינה ודלתות תעשייתיות במפעל",
+  },
+  { images: [{ image: hydraulicRampImage, alt: "רמפה הידראולית תעשייתית בשטח מפעל" }], title: "רמפה הידראולית תעשייתית", alt: "רמפה הידראולית תעשייתית בשטח מפעל" },
+  { images: [{ image: industrialDoorImage, alt: "תריס תעשייתי גדול במפעל" }], title: "תריס ודלת תעשייתית", alt: "תריס תעשייתי גדול במפעל" },
+];
+
+function FieldProjectImage({ slides }: { slides: { image: string; alt: string }[] }) {
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    if (slides.length <= 1) return;
+    const id = window.setInterval(() => {
+      setIndex((i) => (i + 1) % slides.length);
+    }, 3000);
+    return () => window.clearInterval(id);
+  }, [slides.length]);
+
+  return (
+    <div className="relative h-full w-full">
+      {slides.map((slide, i) => (
+        <img
+          key={slide.image}
+          src={slide.image}
+          alt={slide.alt}
+          loading="lazy"
+          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
+            i === index ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      ))}
+      {slides.length > 1 && (
+        <div className="absolute bottom-2 left-1/2 z-10 flex -translate-x-1/2 gap-1.5">
+          {slides.map((_, i) => (
+            <span
+              key={i}
+              aria-hidden="true"
+              className={`h-1.5 w-1.5 rounded-full transition-all ${
+                i === index ? "w-4 bg-white" : "bg-white/60"
+              }`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 const Home = () => {
   const localBusinessSchema = {
@@ -240,13 +292,8 @@ const Home = () => {
           <div className="mt-8 grid gap-4 md:grid-cols-3 md:gap-5">
             {fieldProjects.map((project) => (
               <figure key={project.title} className="group overflow-hidden bg-card shadow-sm">
-                <div className="aspect-[4/5] overflow-hidden md:aspect-[4/3]">
-                  <img
-                    src={project.image}
-                    alt={project.alt}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
+                <div className="relative aspect-[4/5] overflow-hidden md:aspect-[4/3]">
+                  <FieldProjectImage slides={project.images} />
                 </div>
                 <figcaption className="border-r-4 border-primary p-4 text-base font-extrabold text-foreground">
                   {project.title}
